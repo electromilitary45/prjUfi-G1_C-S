@@ -8,7 +8,7 @@ package prj.proy_cs;
  *
  * @author Derek
  */
-public class PrjProy_CS {
+public class Main {
 
     /**
      * @param args the command line arguments
