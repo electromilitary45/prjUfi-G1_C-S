@@ -26,18 +26,71 @@ public class JF_menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        panelP = new javax.swing.JPanel();
+        linea1 = new javax.swing.JPanel();
+        linea2 = new javax.swing.JPanel();
+        ico_UFide = new javax.swing.JLabel();
+        ico_deportes = new javax.swing.JLabel();
+        ico_registro = new javax.swing.JLabel();
+        lbl_registro = new javax.swing.JLabel();
+        ico_catalogo = new javax.swing.JLabel();
+        lbl_catalogo = new javax.swing.JLabel();
+        ico_facturacion = new javax.swing.JLabel();
+        lbl_facturacion = new javax.swing.JLabel();
+        ico_cajas = new javax.swing.JLabel();
+        lbl_cajas = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        panelP.setBackground(new java.awt.Color(51, 51, 51));
+        panelP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        linea1.setBackground(new java.awt.Color(255, 255, 51));
+        panelP.add(linea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 470, 10));
+
+        linea2.setBackground(new java.awt.Color(255, 255, 51));
+        panelP.add(linea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 10, 400));
+
+        ico_UFide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo_fide2.png"))); // NOI18N
+        panelP.add(ico_UFide, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, 90));
+
+        ico_deportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_deportes.png"))); // NOI18N
+        panelP.add(ico_deportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 70, 70));
+
+        ico_registro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_registro.png"))); // NOI18N
+        panelP.add(ico_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
+
+        lbl_registro.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        lbl_registro.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_registro.setText("REGISTRO");
+        panelP.add(lbl_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
+
+        ico_catalogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_catalogo.png"))); // NOI18N
+        panelP.add(ico_catalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, -1, -1));
+
+        lbl_catalogo.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        lbl_catalogo.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_catalogo.setText("CATALOGO");
+        panelP.add(lbl_catalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, -1, -1));
+
+        ico_facturacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_facturacion.png"))); // NOI18N
+        panelP.add(ico_facturacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
+
+        lbl_facturacion.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        lbl_facturacion.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_facturacion.setText("FACTURACION");
+        panelP.add(lbl_facturacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, -1, -1));
+
+        ico_cajas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_cajas2.png"))); // NOI18N
+        panelP.add(ico_cajas, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, -1, -1));
+
+        lbl_cajas.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        lbl_cajas.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_cajas.setText("CAJAS");
+        panelP.add(lbl_cajas, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, -1, -1));
+
+        getContentPane().add(panelP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -78,5 +131,18 @@ public class JF_menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ico_UFide;
+    private javax.swing.JLabel ico_cajas;
+    private javax.swing.JLabel ico_catalogo;
+    private javax.swing.JLabel ico_deportes;
+    private javax.swing.JLabel ico_facturacion;
+    private javax.swing.JLabel ico_registro;
+    private javax.swing.JLabel lbl_cajas;
+    private javax.swing.JLabel lbl_catalogo;
+    private javax.swing.JLabel lbl_facturacion;
+    private javax.swing.JLabel lbl_registro;
+    private javax.swing.JPanel linea1;
+    private javax.swing.JPanel linea2;
+    private javax.swing.JPanel panelP;
     // End of variables declaration//GEN-END:variables
 }
