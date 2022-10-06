@@ -41,6 +41,9 @@ public class JF_menu extends javax.swing.JFrame {
         lbl_cajas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(600, 170));
+        setName("ESCUELA"); // NOI18N
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelP.setBackground(new java.awt.Color(51, 51, 51));
