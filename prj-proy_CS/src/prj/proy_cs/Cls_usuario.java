@@ -5,41 +5,44 @@ import javax.swing.JOptionPane;
 
 public class Cls_usuario {
     //Generación de atributos
+    private int tipo;
     private String usuario;
-    private String contraseña;        
+    private String contrasena;        
     private String apellido;
     private String nombre;
-    private boolean status;
-    public Cls_usuario (){
-    }
-    //Generación de constructores
-
-    public Cls_usuario(String usuario, String contraseña, String apellido, String nombre, boolean status) {
-        this.usuario = "";
-        this.contraseña = "";
-        this.apellido = "";
-        this.nombre = "";
-        this.status=true;
-    }
+    private boolean activo;
     
-    //Generación getters - setters
+    Cls_usuario(){
+        this.tipo=0;
+        this.usuario="";
+        this.contrasena="";
+        this.nombre="";
+        this.apellido="";
+        this.activo=true;
+    }
 
-    public String getUsuario() { 
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getUsuario() {
         return usuario;
     }
 
     public void setUsuario(String usuario) {
-       
         this.usuario = usuario;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public String getApellido() {
@@ -47,7 +50,6 @@ public class Cls_usuario {
     }
 
     public void setApellido(String apellido) {
-        
         this.apellido = apellido;
     }
 
@@ -56,16 +58,15 @@ public class Cls_usuario {
     }
 
     public void setNombre(String nombre) {
-        
         this.nombre = nombre;
     }
 
-    public boolean isStatus() {
-        return status;
+    public boolean isActivo() {
+        return activo;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setActivo(boolean activo) {
+        this.activo = activo;
     }
     
 
