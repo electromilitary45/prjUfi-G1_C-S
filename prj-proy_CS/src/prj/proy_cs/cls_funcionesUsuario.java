@@ -4,10 +4,25 @@
  */
 package prj.proy_cs;
 
+import java.util.LinkedList;
+
 /**
  *
  * @author usuario
  */
 public class cls_funcionesUsuario {
+    
+    //---
+    protected LinkedList listaUsuario = new LinkedList();
+    
+    public void crearUsuario(){}//derek
+    
+    public void mostrarUsaurio(){}
+    
+    public void desactivarUsuario(){
+        
+    }
+    
+    
     
 }

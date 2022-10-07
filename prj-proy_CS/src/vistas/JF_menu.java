@@ -41,7 +41,6 @@ public class JF_menu extends javax.swing.JFrame {
         lbl_facturacion = new javax.swing.JLabel();
         ico_cajas = new javax.swing.JLabel();
         lbl_cajas = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -105,22 +104,10 @@ public class JF_menu extends javax.swing.JFrame {
         lbl_cajas.setText("CAJAS");
         panelP.add(lbl_cajas, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, -1, -1));
 
-        jTextField1.setText("jTextField1");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        panelP.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 220, -1));
-
         getContentPane().add(panelP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void ico_cajasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_cajasMouseClicked
         // TODO add your handling code here:
@@ -170,7 +157,6 @@ public class JF_menu extends javax.swing.JFrame {
     private javax.swing.JLabel ico_registro;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbl_cajas;
     private javax.swing.JLabel lbl_catalogo;
     private javax.swing.JLabel lbl_facturacion;
