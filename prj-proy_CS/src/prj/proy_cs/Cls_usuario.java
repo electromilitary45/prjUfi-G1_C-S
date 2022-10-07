@@ -5,30 +5,24 @@ import javax.swing.JOptionPane;
 
 public class Cls_usuario {
     //Generación de atributos
-    private int tipo;
+    
     private String usuario;
     private String contrasena;        
     private String apellido;
     private String nombre;
-    private boolean activo;
+    private boolean status;
+
+    public Cls_usuario() {
+    }
     
-    Cls_usuario(){
-        this.tipo=0;
-        this.usuario="";
-        this.contrasena="";
-        this.nombre="";
-        this.apellido="";
-        this.activo=true;
+    public Cls_usuario(String usuario, String contrasena, String apellido, String nombre, boolean status) {
+        this.usuario = "";
+        this.contrasena = "";
+        this.apellido = "";
+        this.nombre = "";
+        this.status = true;
     }
-
-    public int getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
-
+   
     public String getUsuario() {
         return usuario;
     }
@@ -61,13 +55,15 @@ public class Cls_usuario {
         this.nombre = nombre;
     }
 
-    public boolean isActivo() {
-        return activo;
+    public boolean isStatus() {
+        return status;
     }
 
-    public void setActivo(boolean activo) {
-        this.activo = activo;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
+
+    
     
 
 }
