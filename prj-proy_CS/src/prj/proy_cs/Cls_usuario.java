@@ -9,16 +9,17 @@ public class Cls_usuario {
     private String contraseña;        
     private String apellido;
     private String nombre;
-    
+    private boolean status;
     public Cls_usuario (){
     }
     //Generación de constructores
 
-    public Cls_usuario(String usuario, String contraseña, String apellido, String nombre) {
-        this.usuario = usuario;
-        this.contraseña = contraseña;
-        this.apellido = apellido;
-        this.nombre = nombre;
+    public Cls_usuario(String usuario, String contraseña, String apellido, String nombre, boolean status) {
+        this.usuario = "";
+        this.contraseña = "";
+        this.apellido = "";
+        this.nombre = "";
+        this.status=true;
     }
     
     //Generación getters - setters
@@ -58,5 +59,14 @@ public class Cls_usuario {
         
         this.nombre = nombre;
     }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+    
 
 }

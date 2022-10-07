@@ -10,13 +10,21 @@ public class Cls_facilitadores extends Cls_usuario {
     }
     
     //Generación constructor
-    public Cls_facilitadores(String usuario, String contraseña, String apellido, String nombre) {
-        super(usuario, contraseña, apellido, nombre);
+
+    public Cls_facilitadores(String usuario, String contraseña, String apellido, String nombre, boolean status) {
+        super(usuario, contraseña, apellido, nombre, status);
     }
 
-    public Cls_facilitadores(double pago) {
+    public double getPago() {
+        return pago;
+    }
+
+    public void setPago(double pago) {
         this.pago = pago;
     }
+    
+
+    
     
 
 }

@@ -15,7 +15,18 @@ public class cls_funcionesUsuario {
     //---
     protected LinkedList listaUsuario = new LinkedList();
     
-    public void crearUsuario(){}//derek
+    public void crearUsuario(){
+        
+        
+        
+        Cls_clientes clsC = new Cls_clientes();
+        
+        //clsC.setApellido(nombre);
+        
+        listaUsuario.add(clsC);
+        
+        
+    }//derek
     
     public void mostrarUsaurio(){}
     
