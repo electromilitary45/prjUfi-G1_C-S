@@ -23,12 +23,12 @@ public class Cls_usuario {
     
     //Generación getters - setters
 
-    public String getUsuario() {
+    public String getUsuario() { 
         return usuario;
     }
 
     public void setUsuario(String usuario) {
-        usuario=JOptionPane.showInputDialog("Ingrese su usuario:");
+       
         this.usuario = usuario;
     }
 
@@ -37,7 +37,7 @@ public class Cls_usuario {
     }
 
     public void setContraseña(String contraseña) {
-        contraseña=JOptionPane.showInputDialog("Ingrese su contraseña:");
+        
         this.contraseña = contraseña;
     }
 
@@ -46,7 +46,7 @@ public class Cls_usuario {
     }
 
     public void setApellido(String apellido) {
-        apellido=JOptionPane.showInputDialog("Ingrese su apellido:");
+        
         this.apellido = apellido;
     }
 
@@ -55,7 +55,7 @@ public class Cls_usuario {
     }
 
     public void setNombre(String nombre) {
-        nombre=JOptionPane.showInputDialog("Ingrese su nombre:");
+        
         this.nombre = nombre;
     }
 
