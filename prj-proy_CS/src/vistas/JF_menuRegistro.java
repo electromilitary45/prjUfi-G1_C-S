@@ -37,8 +37,11 @@ public class JF_menuRegistro extends javax.swing.JFrame {
         jbl_consultarUsuario = new javax.swing.JLabel();
         ico_desactivarUsuario = new javax.swing.JLabel();
         jbl_desactivarUsuario = new javax.swing.JLabel();
+        ico_lista = new javax.swing.JLabel();
+        jbl_desactivarUsuario1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(600, 170));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -58,30 +61,43 @@ public class JF_menuRegistro extends javax.swing.JFrame {
                 ico_registroUsuMouseClicked(evt);
             }
         });
-        jPanel1.add(ico_registroUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
+        jPanel1.add(ico_registroUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
         jbl_resgistroUsu.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jbl_resgistroUsu.setForeground(new java.awt.Color(255, 255, 255));
         jbl_resgistroUsu.setText("NUEVO USUARIO");
-        jPanel1.add(jbl_resgistroUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
+        jPanel1.add(jbl_resgistroUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
 
         ico_consultaUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_UsuConsulta.png"))); // NOI18N
-        jPanel1.add(ico_consultaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
+        ico_consultaUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_consultaUsuarioMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ico_consultaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, -1, -1));
 
         jbl_consultarUsuario.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jbl_consultarUsuario.setForeground(new java.awt.Color(255, 255, 255));
         jbl_consultarUsuario.setText("BUSCAR USUARIO");
-        jPanel1.add(jbl_consultarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, -1, -1));
+        jPanel1.add(jbl_consultarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, -1));
 
         ico_desactivarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_UsuDesactivar.png"))); // NOI18N
-        jPanel1.add(ico_desactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, -1, -1));
+        jPanel1.add(ico_desactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
 
         jbl_desactivarUsuario.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jbl_desactivarUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        jbl_desactivarUsuario.setText("DESACTIVAR USUARIO");
-        jPanel1.add(jbl_desactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, -1, -1));
+        jbl_desactivarUsuario.setText("LISTAR USUARIOS");
+        jPanel1.add(jbl_desactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 560));
+        ico_lista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_lista128.png"))); // NOI18N
+        jPanel1.add(ico_lista, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+
+        jbl_desactivarUsuario1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jbl_desactivarUsuario1.setForeground(new java.awt.Color(255, 255, 255));
+        jbl_desactivarUsuario1.setText("DESACTIVAR USUARIO");
+        jPanel1.add(jbl_desactivarUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 440, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -99,6 +115,13 @@ public class JF_menuRegistro extends javax.swing.JFrame {
         JF_registroUsuario JFRU = new JF_registroUsuario();
         JFRU.setVisible(true);
     }//GEN-LAST:event_ico_registroUsuMouseClicked
+
+    private void ico_consultaUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_consultaUsuarioMouseClicked
+        // TODO add your handling code here:
+        dispose();
+        JF_consultaUsuario JFCU = new JF_consultaUsuario();
+        JFCU.setVisible(true);
+    }//GEN-LAST:event_ico_consultaUsuarioMouseClicked
 
     /**
      * @param args the command line arguments
@@ -138,11 +161,13 @@ public class JF_menuRegistro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ico_consultaUsuario;
     private javax.swing.JLabel ico_desactivarUsuario;
+    private javax.swing.JLabel ico_lista;
     private javax.swing.JLabel ico_registroUsu;
     private javax.swing.JLabel ico_retroceder;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jbl_consultarUsuario;
     private javax.swing.JLabel jbl_desactivarUsuario;
+    private javax.swing.JLabel jbl_desactivarUsuario1;
     private javax.swing.JLabel jbl_resgistroUsu;
     // End of variables declaration//GEN-END:variables
 }

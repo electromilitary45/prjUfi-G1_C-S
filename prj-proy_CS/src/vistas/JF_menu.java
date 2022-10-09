@@ -15,7 +15,7 @@ import prj.proy_cs.cls_menuPrincipal;
  */
 public class JF_menu extends javax.swing.JFrame {
     //----------------INSTANCIAS----------
-    cls_menuPrincipal clsMP = new cls_menuPrincipal();
+    
     
     /**
      * Creates new form JF_menu
@@ -145,6 +145,7 @@ public class JF_menu extends javax.swing.JFrame {
 
     private void ico_registroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_registroMouseClicked
         // TODO add your handling code here:
+        cls_menuPrincipal clsMP = new cls_menuPrincipal();
         char op='A';
         clsMP.menuP(op);
         dispose();
