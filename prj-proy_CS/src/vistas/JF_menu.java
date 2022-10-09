@@ -4,12 +4,19 @@
  */
 package vistas;
 
+import java.awt.Color;
+import java.util.LinkedList;
+import javax.swing.JOptionPane;
+import prj.proy_cs.cls_menuPrincipal;
+
 /**
  *
  * @author Derek
  */
 public class JF_menu extends javax.swing.JFrame {
-
+    //----------------INSTANCIAS----------
+    cls_menuPrincipal clsMP = new cls_menuPrincipal();
+    
     /**
      * Creates new form JF_menu
      */
@@ -41,6 +48,7 @@ public class JF_menu extends javax.swing.JFrame {
         lbl_facturacion = new javax.swing.JLabel();
         ico_cajas = new javax.swing.JLabel();
         lbl_cajas = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -67,7 +75,19 @@ public class JF_menu extends javax.swing.JFrame {
         ico_deportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_deportes.png"))); // NOI18N
         panelP.add(ico_deportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 70, 70));
 
+        ico_registro.setBackground(new java.awt.Color(255, 255, 0));
+        ico_registro.setForeground(new java.awt.Color(204, 204, 204));
         ico_registro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_registro.png"))); // NOI18N
+        ico_registro.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                ico_registroFocusGained(evt);
+            }
+        });
+        ico_registro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_registroMouseClicked(evt);
+            }
+        });
         panelP.add(ico_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
 
         lbl_registro.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -104,6 +124,16 @@ public class JF_menu extends javax.swing.JFrame {
         lbl_cajas.setText("CAJAS");
         panelP.add(lbl_cajas, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 0));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("SALIR");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        panelP.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 500, -1, -1));
+
         getContentPane().add(panelP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 560));
 
         pack();
@@ -112,6 +142,24 @@ public class JF_menu extends javax.swing.JFrame {
     private void ico_cajasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_cajasMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_ico_cajasMouseClicked
+
+    private void ico_registroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_registroMouseClicked
+        // TODO add your handling code here:
+        char op='A';
+        clsMP.menuP(op);
+        dispose();
+        
+    }//GEN-LAST:event_ico_registroMouseClicked
+
+    private void ico_registroFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ico_registroFocusGained
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_ico_registroFocusGained
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -143,6 +191,7 @@ public class JF_menu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new JF_menu().setVisible(true);
             }
         });
@@ -155,6 +204,7 @@ public class JF_menu extends javax.swing.JFrame {
     private javax.swing.JLabel ico_deportes;
     private javax.swing.JLabel ico_facturacion;
     private javax.swing.JLabel ico_registro;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lbl_cajas;

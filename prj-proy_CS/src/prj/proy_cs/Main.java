@@ -5,13 +5,14 @@ import vistas.JF_menu;
 public class Main {
 
     public static void main(String[] args) {
-        //------INSTANCIAS-----
+        //------INICIAR DESDE VISTA PRINCIPAL-----
         JF_menu JFM = new JF_menu();
-        
+        JFM.setVisible(true);
         
         
         //----INICIAR DESDE EL MENU PRINCIPAL
-        //JFM.setVisible(true);
+        //cls_menuPrincipal clsM = new cls_menuPrincipal();
+        
         
     }
     
