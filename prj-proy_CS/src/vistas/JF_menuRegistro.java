@@ -97,7 +97,7 @@ public class JF_menuRegistro extends javax.swing.JFrame {
         jbl_desactivarUsuario1.setText("DESACTIVAR USUARIO");
         jPanel1.add(jbl_desactivarUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 440, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 560));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

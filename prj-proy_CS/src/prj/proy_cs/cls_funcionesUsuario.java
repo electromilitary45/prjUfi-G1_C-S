@@ -11,7 +11,6 @@ public class cls_funcionesUsuario {
     ///-----------BASES DE DATOS0----------------------
     public void crearUsuario(String nombre, String apellido, int tipo, String usuario, String password) {
         try {
-
             if (tipo == 1) { // clientes
                 Cls_clientes c = new Cls_clientes();
                 c.setTipo(tipo);
