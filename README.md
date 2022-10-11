@@ -6,6 +6,6 @@ Proyecto Fidelitas Q3-2022 🧿 || Prog. Cliente/Servidor || G2
 <li>🐶 Derek Sebastian Leiva Villalobos</li>
 <li>🦊 Sebastián Alvarado Ma
 <li>🦄 María José Valverde Peña</li>
-<li>🧸 </li>
+<li>🧸 Marcel Zapata Castro</li>
 
 <h1></h1>
