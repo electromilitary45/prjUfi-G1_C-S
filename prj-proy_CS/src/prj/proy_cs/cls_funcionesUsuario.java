@@ -120,8 +120,10 @@ public class cls_funcionesUsuario {
     }//fin metodo mostrarUsuarioEspecifico
 
     public void desactivarUsuario(String usuario) {
-        /*
-        int tipo = Integer.parseInt(JOptionPane.showInputDialog(null, "Inserte el tipo de usuario que desea desactivar:\n1.Clientes\n2.Facilitadores\n3.Familiares"));
+        /* 
+        
+        SE tiene que hacer como el metodo de 'buscar un usuario determinado' todo se hace con el usuario (SEBASTIAN)
+        Se debe encontrar el usuario en los diferentes LinkedList
         
         String usuario = JOptionPane.showInputDialog(null, "Digite el nombre del usuario que desea desactivar: ");
         for (int x = 0; x < listaUsuarios.size(); x++) {
