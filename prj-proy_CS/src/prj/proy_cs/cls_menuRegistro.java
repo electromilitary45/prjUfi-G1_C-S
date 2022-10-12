@@ -16,10 +16,9 @@ public class cls_menuRegistro {
     public void menuR(char op){
         if(op=='A'){ // registro Usuario
             
-        }else if(op=='B'){ // dessactivar usuario
+        }else if(op=='B'){ // desactivar usuario
             
-        }else{ // buscar usuario
-            
-        }
+        }else{} 
+                    
     }//fin menuR
 }//fin menuR

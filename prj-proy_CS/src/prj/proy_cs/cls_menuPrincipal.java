@@ -22,6 +22,7 @@ public class cls_menuPrincipal {
         if(opcion=='A'){ // iniciar menu de registro || Modulo 1
             //JFM.dispose();
             JFMR.setVisible(true);
+        }else{
         }
         
     }//fin metodo menuP(){}

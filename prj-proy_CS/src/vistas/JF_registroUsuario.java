@@ -185,6 +185,10 @@ public class JF_registroUsuario extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(null, "DEBE LLENAR ESPACION REQUERIDOS");
         }
+        dispose();
+        JF_menuRegistro JFM = new JF_menuRegistro();
+        JFM.setVisible(true);
+        
 
 
     }//GEN-LAST:event_btn_crearMouseClicked

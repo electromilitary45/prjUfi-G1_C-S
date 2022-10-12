@@ -83,6 +83,41 @@ public class cls_funcionesUsuario {
         }
     }
 
+    public void mostrarUsuarioEspecifico(String usuario) {
+
+        int indice_user = 0;
+        boolean encontro = false;
+
+        for (int x = 0; x < listaUsuarios.size(); x++) {
+
+            if (usuario.equals(listaUsuarios.get(x).getUsuario())) {
+                indice_user = x;
+                encontro = true;
+
+                //usuario.equals(listaUsuarios.get(x).getUsuario())
+                //if(listaUsuarios.get(x)){
+                //Aqui se debe hacer lo del tipo.
+                //String tipo = cliente                
+                //String tipo = facilitadores
+                //String tipo = familiares
+                //}
+                
+            }//fin if 
+
+        }//fin for
+        if (encontro != false) {
+
+            JOptionPane.showMessageDialog(null,
+                    "La informacion: " + listaUsuarios.get(indice_user).getNombre() + "\n"
+                    + listaUsuarios.get(indice_user).getApellido() + "\n"
+                    + listaUsuarios.get(indice_user).getUsuario() + "\n"
+                    + listaUsuarios.get(indice_user).getContrasena() + "\n");
+        } else {
+            JOptionPane.showMessageDialog(null, "No se encontro la informacion");
+        }
+
+    }//fin metodo mostrarUsuarioEspecifico
+
     public void desactivarUsuario() {
         /*
         int tipo = Integer.parseInt(JOptionPane.showInputDialog(null, "Inserte el tipo de usuario que desea desactivar:\n1.Clientes\n2.Facilitadores\n3.Familiares"));

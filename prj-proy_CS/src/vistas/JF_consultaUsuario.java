@@ -5,6 +5,7 @@
 package vistas;
 
 import extensiones.TextPrompt;
+import prj.proy_cs.cls_funcionesUsuario;
 
 /**
  *
@@ -94,6 +95,16 @@ public class JF_consultaUsuario extends javax.swing.JFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
+        
+        String usuario=jtf_usuario.getText();
+        cls_funcionesUsuario User = new cls_funcionesUsuario();
+        User.mostrarUsuarioEspecifico(usuario);
+        dispose();
+        
+        JF_menuRegistro JFMR = new JF_menuRegistro();
+        JFMR.setVisible(true);
+        
+               
         
     }//GEN-LAST:event_jButton2MouseClicked
 
