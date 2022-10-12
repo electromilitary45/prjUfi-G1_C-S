@@ -6,9 +6,12 @@ import javax.swing.JOptionPane;
 public class cls_funcionesUsuario {
 
     //--------BASES DE DATOS LINKEDLIST---------------
-    LinkedList<Cls_usuario> listaUsuarios = new LinkedList<Cls_usuario>();
+    public static LinkedList<Cls_usuario> listaUsuarios = new LinkedList<Cls_usuario>(); // esta se debe eliminar
+    public static LinkedList<Cls_clientes> listaClientes = new LinkedList<Cls_clientes>();
+    public static LinkedList<Cls_facilitadores> listaFacilitadores = new LinkedList<Cls_facilitadores>();
+    public static LinkedList<Cls_familiares> listaFamiliares = new LinkedList<Cls_familiares>();
 
-    ///-----------BASES DE DATOS0----------------------
+    ///-----------METODOS CRUD----------------------
     public void crearUsuario(String nombre, String apellido, int tipo, String usuario, String password) {
         try {
             if (tipo == 1) { // clientes
@@ -45,27 +48,7 @@ public class cls_funcionesUsuario {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error\n" + e.getMessage());
         }
-        /*try {
-            JOptionPane.showMessageDialog(null, "Crear nuevo Usuario");
-            int x = 1;
-            while (x == 1) {
-                Cls_clientes c = new Cls_clientes();
-
-                c.setTipo(Integer.parseInt(JOptionPane.showInputDialog(null, "Inserte el tipo de Usuario\n1.Clientes\n2.Facilitadores\n3.Familiares\n")));
-                c.setUsuario(JOptionPane.showInputDialog(null, "Inserte el nombre de su usuario: "));
-                c.setContrasena(JOptionPane.showInputDialog(null, "Inserte su contraseña: "));
-                c.setNombre(JOptionPane.showInputDialog(null, "Inserte su nombre: "));
-                c.setApellido(JOptionPane.showInputDialog(null, "Inserte sus apellidos: "));
-                listaUsuarios.add(c);
-
-                x = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea agregar otro usuario? 1.Si 2.No"));
-            }
-        } catch (NumberFormatException ex01) {
-            JOptionPane.showMessageDialog(null, "Error de formato al digitar " + ex01.getMessage());
-        } catch (StringIndexOutOfBoundsException ex02) {
-            JOptionPane.showMessageDialog(null, "Error, no se ingresó ningún dato " + ex02.getMessage());
-        }*/
-    }
+    }//fin crearUsuario(){}
 
     public void mostrarUsuariosActivos() {
         for (int x = 0; x < listaUsuarios.size(); x++) {
@@ -101,17 +84,17 @@ public class cls_funcionesUsuario {
                 //String tipo = facilitadores
                 //String tipo = familiares
                 //}
-                
             }//fin if 
 
         }//fin for
         if (encontro != false) {
 
             JOptionPane.showMessageDialog(null,
-                    "La informacion: " + listaUsuarios.get(indice_user).getNombre() + "\n"
-                    + listaUsuarios.get(indice_user).getApellido() + "\n"
-                    + listaUsuarios.get(indice_user).getUsuario() + "\n"
-                    + listaUsuarios.get(indice_user).getContrasena() + "\n");
+                    "DATOS DE USUARIO \n"
+                    + "Nombre: " + listaUsuarios.get(indice_user).getNombre() + "\n"
+                    + "Apellido: " + listaUsuarios.get(indice_user).getApellido() + "\n"
+                    + "Usuario: " + listaUsuarios.get(indice_user).getUsuario() + "\n"
+                    + "Contraseña:  " + listaUsuarios.get(indice_user).getContrasena() + "\n");
         } else {
             JOptionPane.showMessageDialog(null, "No se encontro la informacion");
         }

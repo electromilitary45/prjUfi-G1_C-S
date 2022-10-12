@@ -82,6 +82,11 @@ public class JF_menuRegistro extends javax.swing.JFrame {
         jPanel1.add(jbl_consultarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, -1));
 
         ico_desactivarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_UsuDesactivar.png"))); // NOI18N
+        ico_desactivarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_desactivarUsuarioMouseClicked(evt);
+            }
+        });
         jPanel1.add(ico_desactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
 
         jbl_desactivarUsuario.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -122,6 +127,11 @@ public class JF_menuRegistro extends javax.swing.JFrame {
         JF_consultaUsuario JFCU = new JF_consultaUsuario();
         JFCU.setVisible(true);
     }//GEN-LAST:event_ico_consultaUsuarioMouseClicked
+
+    private void ico_desactivarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_desactivarUsuarioMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_ico_desactivarUsuarioMouseClicked
 
     /**
      * @param args the command line arguments

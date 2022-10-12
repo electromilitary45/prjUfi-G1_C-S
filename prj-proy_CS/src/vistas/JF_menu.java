@@ -87,6 +87,9 @@ public class JF_menu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ico_registroMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ico_registroMouseEntered(evt);
+            }
         });
         panelP.add(ico_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
 
@@ -161,6 +164,12 @@ public class JF_menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void ico_registroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_registroMouseEntered
+        // TODO add your handling code here:
+        ico_registro.setBackground(Color.YELLOW);
+        ico_registro.setOpaque(true);
+    }//GEN-LAST:event_ico_registroMouseEntered
 
     /**
      * @param args the command line arguments
