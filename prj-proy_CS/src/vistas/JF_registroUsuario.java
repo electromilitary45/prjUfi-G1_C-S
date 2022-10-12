@@ -14,7 +14,7 @@ import prj.proy_cs.cls_funcionesUsuario;
  */
 public class JF_registroUsuario extends javax.swing.JFrame {
     //--INSTANCIAS--
-    
+
     /**
      * Creates new form JF_registroUsuario
      */
@@ -156,39 +156,25 @@ public class JF_registroUsuario extends javax.swing.JFrame {
     private void btn_crearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_crearMouseClicked
         // TODO add your handling code here:]
         cls_funcionesUsuario clsFU = new cls_funcionesUsuario();
-        if (!jtf_Usuario.getText().isEmpty() && !jtf_Usuario.getText().isBlank() &&!jtf_nombre.getText().isEmpty() 
-                && !jtf_nombre.getText().isBlank() 
-                && !jtf_apellido.getText().isEmpty() && !jtf_Usuario.getText().isBlank() 
-                && cbx_tipoUsuario.getSelectedIndex()!=0 && !String.valueOf(jtp_pass.getPassword()).isBlank() 
+        if (!jtf_Usuario.getText().isEmpty() && !jtf_Usuario.getText().isBlank() && !jtf_nombre.getText().isEmpty()
+                && !jtf_nombre.getText().isBlank()
+                && !jtf_apellido.getText().isEmpty() && !jtf_Usuario.getText().isBlank()
+                && cbx_tipoUsuario.getSelectedIndex() != 0 && !String.valueOf(jtp_pass.getPassword()).isBlank()
                 && !String.valueOf(jtp_pass.getPassword()).isEmpty()) {
-            
+
             String nombre = jtf_nombre.getText();
             String ape = jtf_apellido.getText();
             String User = jtf_Usuario.getText();
             String pass = String.valueOf(jtp_pass.getPassword());
-            int tipo=cbx_tipoUsuario.getSelectedIndex();
-            /*if (cbx_tipoUsuario.getSelectedIndex()) {
-                tipo = 1;
-                JOptionPane.showMessageDialog(null, tipo);
-            } else if (cbx_tipoUsuario.getSelectedIndex() == 3) {
-                tipo = 2;
-                JOptionPane.showMessageDialog(null, tipo);
-            } else if (cbx_tipoUsuario.getSelectedIndex() == 4) {
-                tipo = 3;
-                JOptionPane.showMessageDialog(null, tipo);
-            } else {
+            int tipo = cbx_tipoUsuario.getSelectedIndex();
 
-                JOptionPane.showMessageDialog(null,"xd");
-            }*/
-            JOptionPane.showMessageDialog(null, nombre+"\n"+ape+"\n"+User+"\n"+pass+"\n"+tipo);
             clsFU.crearUsuario(nombre, ape, tipo, User, pass);
-        }else{
+            dispose();
+            JF_menuRegistro JFM = new JF_menuRegistro();
+            JFM.setVisible(true);
+        } else {
             JOptionPane.showMessageDialog(null, "DEBE LLENAR ESPACION REQUERIDOS");
         }
-        dispose();
-        JF_menuRegistro JFM = new JF_menuRegistro();
-        JFM.setVisible(true);
-        
 
 
     }//GEN-LAST:event_btn_crearMouseClicked

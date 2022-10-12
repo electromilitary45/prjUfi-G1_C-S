@@ -24,6 +24,7 @@
       <Point value="[600, 170]"/>
     </Property>
     <Property name="name" type="java.lang.String" value="ESCUELA" noResource="true"/>
+    <Property name="undecorated" type="boolean" value="true"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>

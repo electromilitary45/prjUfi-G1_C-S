@@ -42,6 +42,8 @@ public class JF_menuRegistro extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(600, 170));
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -130,7 +132,9 @@ public class JF_menuRegistro extends javax.swing.JFrame {
 
     private void ico_desactivarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_desactivarUsuarioMouseClicked
         // TODO add your handling code here:
-        
+        dispose();
+        JF_desactivarUsuario JFDU = new JF_desactivarUsuario();
+        JFDU.setVisible(true);
     }//GEN-LAST:event_ico_desactivarUsuarioMouseClicked
 
     /**
