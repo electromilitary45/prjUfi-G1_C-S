@@ -9,3 +9,4 @@ Proyecto Fidelitas Q3-2022 🧿 || Prog. Cliente/Servidor || G2
 <li>🧸 Marcel Zapata Castro</li>
 
 <h1></h1>
+- 🧿 Diagrama: <b><a href=https://www.linkedin.com/in/villalobossebas/>LucidChart</a></b>
