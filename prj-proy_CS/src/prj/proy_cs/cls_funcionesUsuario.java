@@ -6,16 +6,13 @@ import javax.swing.JOptionPane;
 public class cls_funcionesUsuario {
 
     //--------BASES DE DATOS LINKEDLIST---------------
-    public static LinkedList<Cls_usuario> listaUsuarios = new LinkedList<Cls_usuario>(); // esta se debe eliminar 
     public static LinkedList<Cls_clientes> listaClientes = new LinkedList<Cls_clientes>();
     public static LinkedList<Cls_facilitadores> listaFacilitadores = new LinkedList<Cls_facilitadores>();
     public static LinkedList<Cls_familiares> listaFamiliares = new LinkedList<Cls_familiares>();
 
     ///-----------METODOS CRUD----------------------
     public void crearUsuario(String nombre, String apellido, int tipo, String usuario, String password) {
-        /*
-        Solamente se debe cambiar la lista dependiendo que tipo de usuario se guarde (MAJO)
-        */
+      
         try {
             if (tipo == 1) { // ---------clientes-----------
                 Cls_clientes c = new Cls_clientes();
@@ -25,7 +22,7 @@ public class cls_funcionesUsuario {
                 c.setStatus(true);
                 c.setUsuario(usuario);
                 c.setContrasena(password);
-                listaUsuarios.add(c); // se debe cambiar(MAJO)
+                listaClientes.add(c); // se debe cambiar(MAJO)
                 JOptionPane.showMessageDialog(null, "USUARIO CREADO CON EXITO!");
             } else if (tipo == 2) { // -----facilitadores---------
                 Cls_facilitadores faci = new Cls_facilitadores();
@@ -36,7 +33,7 @@ public class cls_funcionesUsuario {
                 faci.setTipo(tipo);
                 faci.setPago(0);
                 faci.setContrasena(password);
-                listaUsuarios.add(faci);//se debe cambiar (MAJO)
+                listaFacilitadores.add(faci);//se debe cambiar (MAJO)
                 JOptionPane.showMessageDialog(null, "USUARIO CREADO CON EXITO!");
             } else {//---------familiares---------
                 Cls_familiares fam = new Cls_familiares();
@@ -46,9 +43,9 @@ public class cls_funcionesUsuario {
                 fam.setTipo(tipo);
                 fam.setUsuario(usuario);
                 fam.setContrasena(password);
-                listaUsuarios.add(fam);//sedebe cambiar (MAJO)
+                listaFamiliares.add(fam);//sedebe cambiar (MAJO)
                 JOptionPane.showMessageDialog(null, "USUARIO CREADO CON EXITO!");
-            }
+            } 
             
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error\n" + e.getMessage());
@@ -74,49 +71,70 @@ public class cls_funcionesUsuario {
     public void mostrarUsuarioEspecifico(String usuario) {
 
         int indice_user = 0;
-        boolean encontro = false;
-        /*(Majo)
-        ->CREAR 3 variables booelanas de y eliminar la existente
-        - encontroC
-        - encontroFaci
-        - encontroFam
-        ->Se deben crear 3 for con la misma estructura para buscar la persona pero con las diferentes listas
-        ->para dar la respeusta se debe utilizar la misma estructura per dependiendo si encontro cliente/familiar/facilitador se utilizan respeustas diferentes
-        */
+        boolean encontroC=false;
+        boolean encontroFaci=false;
+        boolean encontroFam=false;
+        //Tipo de Usuarios
+        String tipo_1 = cliente;           
+        String tipo_2= familiares;
+        String tipo_3= facilitadores;
 
-        for (int x = 0; x < listaUsuarios.size(); x++) {
-            
-            if (usuario.equals(listaUsuarios.get(x).getUsuario())) {
+        //--------------------Clientes--------------------//
+        for (int x = 0; x < listaClientes.size(); x++){
+            if(listaCliente.get(x).getTipo==2){
+            tipo_1=cliente;
+            }
+            if(usuario.equals(listaClientes.get(x).getUsuario())){
                 indice_user = x;
-                encontro = true;
-                
-                //String tipo="";
-                //usuario.equals(listaUsuarios.get(x).getUsuario())
-                //if(listaUsuarios.get(x).getTipo ==1){
-                // tipo=cliente
-                //}
-                //Aqui se debe hacer lo del tipo.
-                //String tipo = cliente                
-                //String tipo = facilitadores
-                //String tipo = familiares
-                //}
-            }//fin if 
-
-        }//fin for
-        if (encontro != false) {
-
+                encontroC = true;             
+            }
+        }//fin for clientes
+        for (int x = 0; x < listaFamiliares.size(); x++){
+            if(listaFamiliares.get(x).getTipo==2){
+            tipo_2= familiares;
+            }
+            if(usuario.equals(listaFamiliares.get(x).getUsuario())){
+                indice_user = x;
+                encontroFam = true;               
+            }
+        }//fin for familiares
+        for (int x = 0; x < listaFacilitadores.size(); x++){
+            if(listaFacilitadores.get(x).getTipo==2){
+            tipo_3= facilitadores;
+            }
+            if(usuario.equals(listaFacilitadores.get(x).getUsuario())){
+                indice_user = x;
+                encontroFaci = true;      
+            }
+        } //fin for facilitadores
+        if (encontroC != false) {
             JOptionPane.showMessageDialog(null,
                     "-----DATOS DE USUARIO-----\n"
-                    + "Nombre: " + listaUsuarios.get(indice_user).getNombre() + "\n"
-                    + "Apellido: " + listaUsuarios.get(indice_user).getApellido() + "\n"
-                    + "Usuario: " + listaUsuarios.get(indice_user).getUsuario() + "\n"
-                    + "Contraseña:  " + listaUsuarios.get(indice_user).getContrasena() + "\n");
+                    + "Nombre: " + listaClientes.get(indice_user).getNombre() + "\n"
+                    + "Apellido: " + listaClientes.get(indice_user).getApellido() + "\n"
+                    + "Usuario: " + listaClientes.get(indice_user).getUsuario() + "\n"
+                    + "Contraseña:  " + listaClientes.get(indice_user).getContrasena() + "\n");
                     //agregar tipo (dependiendo del tipo no se puede dar el numero se debe convertir con alguna sentencia que el numero se comvierta en una palabra)(MAJO)
                     //no se puede poner un dato quemado (MAJO)
-        } else {
-            JOptionPane.showMessageDialog(null, "No se encontro la informacion");
+        } else if (encontroFam!=false){
+            JOptionPane.showMessageDialog(null,
+                    "-----DATOS DE USUARIO-----\n"
+                    + "Nombre: " + listaFamiliares.get(indice_user).getNombre() + "\n"
+                    + "Apellido: " + listaFamiliares.get(indice_user).getApellido() + "\n"
+                    + "Usuario: " + listaFamiliares.get(indice_user).getUsuario() + "\n"
+                    + "Contraseña:  " + listaFamiliares.get(indice_user).getContrasena() + "\n");
+        }else if(encontroFaci!=false){
+            JOptionPane.showMessageDialog(null,
+                    "-----DATOS DE USUARIO-----\n"
+                    + "Nombre: " + listaFacilitadores.get(indice_user).getNombre() + "\n"
+                    + "Apellido: " + listaFacilitadores.get(indice_user).getApellido() + "\n"
+                    + "Usuario: " + listaFacilitadores.get(indice_user).getUsuario() + "\n"
+                    + "Contraseña:  " + listaFacilitadores.get(indice_user).getContrasena() + "\n");
         }
-
+        else{
+            JOptionPane.showMessageDialog(null, "¡Lo sentimos... no se encontró ningún tipo de información!");
+        }
+  
     }//fin metodo mostrarUsuarioEspecifico
 
     public void desactivarUsuario(String usuario) {
