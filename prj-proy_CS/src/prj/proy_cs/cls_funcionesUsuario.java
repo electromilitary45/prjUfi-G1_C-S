@@ -12,7 +12,7 @@ public class cls_funcionesUsuario {
 
     ///-----------METODOS CRUD----------------------
     public void crearUsuario(String nombre, String apellido, int tipo, String usuario, String password) {
-      
+
         try {
             if (tipo == 1) { // ---------clientes-----------
                 Cls_clientes c = new Cls_clientes();
@@ -45,12 +45,79 @@ public class cls_funcionesUsuario {
                 fam.setContrasena(password);
                 listaFamiliares.add(fam);//sedebe cambiar (MAJO)
                 JOptionPane.showMessageDialog(null, "USUARIO CREADO CON EXITO!");
-            } 
-            
+            }
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error\n" + e.getMessage());
         }
     }//fin crearUsuario(){}
+
+    public void mostrarUsuarioEspecifico(String usuario) {
+
+        int indice_user = 0;
+        boolean encontroC = false;
+        boolean encontroFaci = false;
+        boolean encontroFam = false;
+        //Tipo de Usuarios
+        String tipo = "";
+
+        //--------------------Clientes--------------------//
+        for (int x = 0; x < listaClientes.size(); x++) {
+
+            if (usuario.equals(listaClientes.get(x).getUsuario())) {
+                tipo = "Cliente";
+                indice_user = x;
+                encontroC = true;
+            }
+        }//fin for clientes
+        //--------------------Familiares--------------------//
+        for (int x = 0; x < listaFamiliares.size(); x++) {
+
+            if (usuario.equals(listaFamiliares.get(x).getUsuario())) {
+                tipo = "Familiar";
+                indice_user = x;
+                encontroFam = true;
+            }
+        }//fin for familiares
+        //--------------------Facilitadores--------------------//
+        for (int x = 0; x < listaFacilitadores.size(); x++) {
+
+            if (usuario.equals(listaFacilitadores.get(x).getUsuario())) {
+                tipo = "Facilitadores";
+                indice_user = x;
+                encontroFaci = true;
+            }
+        } //fin for facilitadores
+        if (encontroC != false) {
+            JOptionPane.showMessageDialog(null,
+                    "-----DATOS DE USUARIO-----\n"
+                    + "Nombre: " + listaClientes.get(indice_user).getNombre() + "\n"
+                    + "Apellido: " + listaClientes.get(indice_user).getApellido() + "\n"
+                    + "Usuario: " + listaClientes.get(indice_user).getUsuario() + "\n"
+                    + "Contraseña:  " + listaClientes.get(indice_user).getContrasena() + "\n"
+                    + "Tipo: " + tipo);
+
+        } else if (encontroFam != false) {
+            JOptionPane.showMessageDialog(null,
+                    "-----DATOS DE USUARIO-----\n"
+                    + "Nombre: " + listaFamiliares.get(indice_user).getNombre() + "\n"
+                    + "Apellido: " + listaFamiliares.get(indice_user).getApellido() + "\n"
+                    + "Usuario: " + listaFamiliares.get(indice_user).getUsuario() + "\n"
+                    + "Contraseña:  " + listaFamiliares.get(indice_user).getContrasena() + "\n"
+                    + "Tipo: " + tipo);
+        } else if (encontroFaci != false) {
+            JOptionPane.showMessageDialog(null,
+                    "-----DATOS DE USUARIO-----\n"
+                    + "Nombre: " + listaFacilitadores.get(indice_user).getNombre() + "\n"
+                    + "Apellido: " + listaFacilitadores.get(indice_user).getApellido() + "\n"
+                    + "Usuario: " + listaFacilitadores.get(indice_user).getUsuario() + "\n"
+                    + "Contraseña:  " + listaFacilitadores.get(indice_user).getContrasena() + "\n"
+                    + "Tipo: " + tipo);
+        } else {
+            JOptionPane.showMessageDialog(null, "¡Lo sentimos... no se encontró ningún tipo de información!");
+        }
+
+    }//fin metodo mostrarUsuarioEspecifico
 
     public void mostrarUsuariosActivos() {
         for (int x = 0; x < listaUsuarios.size(); x++) {
@@ -67,75 +134,6 @@ public class cls_funcionesUsuario {
             }
         }
     }
-
-    public void mostrarUsuarioEspecifico(String usuario) {
-
-        int indice_user = 0;
-        boolean encontroC=false;
-        boolean encontroFaci=false;
-        boolean encontroFam=false;
-        //Tipo de Usuarios
-        String tipo_1 = cliente;           
-        String tipo_2= familiares;
-        String tipo_3= facilitadores;
-
-        //--------------------Clientes--------------------//
-        for (int x = 0; x < listaClientes.size(); x++){
-            if(listaCliente.get(x).getTipo==2){
-            tipo_1=cliente;
-            }
-            if(usuario.equals(listaClientes.get(x).getUsuario())){
-                indice_user = x;
-                encontroC = true;             
-            }
-        }//fin for clientes
-        for (int x = 0; x < listaFamiliares.size(); x++){
-            if(listaFamiliares.get(x).getTipo==2){
-            tipo_2= familiares;
-            }
-            if(usuario.equals(listaFamiliares.get(x).getUsuario())){
-                indice_user = x;
-                encontroFam = true;               
-            }
-        }//fin for familiares
-        for (int x = 0; x < listaFacilitadores.size(); x++){
-            if(listaFacilitadores.get(x).getTipo==2){
-            tipo_3= facilitadores;
-            }
-            if(usuario.equals(listaFacilitadores.get(x).getUsuario())){
-                indice_user = x;
-                encontroFaci = true;      
-            }
-        } //fin for facilitadores
-        if (encontroC != false) {
-            JOptionPane.showMessageDialog(null,
-                    "-----DATOS DE USUARIO-----\n"
-                    + "Nombre: " + listaClientes.get(indice_user).getNombre() + "\n"
-                    + "Apellido: " + listaClientes.get(indice_user).getApellido() + "\n"
-                    + "Usuario: " + listaClientes.get(indice_user).getUsuario() + "\n"
-                    + "Contraseña:  " + listaClientes.get(indice_user).getContrasena() + "\n");
-                    //agregar tipo (dependiendo del tipo no se puede dar el numero se debe convertir con alguna sentencia que el numero se comvierta en una palabra)(MAJO)
-                    //no se puede poner un dato quemado (MAJO)
-        } else if (encontroFam!=false){
-            JOptionPane.showMessageDialog(null,
-                    "-----DATOS DE USUARIO-----\n"
-                    + "Nombre: " + listaFamiliares.get(indice_user).getNombre() + "\n"
-                    + "Apellido: " + listaFamiliares.get(indice_user).getApellido() + "\n"
-                    + "Usuario: " + listaFamiliares.get(indice_user).getUsuario() + "\n"
-                    + "Contraseña:  " + listaFamiliares.get(indice_user).getContrasena() + "\n");
-        }else if(encontroFaci!=false){
-            JOptionPane.showMessageDialog(null,
-                    "-----DATOS DE USUARIO-----\n"
-                    + "Nombre: " + listaFacilitadores.get(indice_user).getNombre() + "\n"
-                    + "Apellido: " + listaFacilitadores.get(indice_user).getApellido() + "\n"
-                    + "Usuario: " + listaFacilitadores.get(indice_user).getUsuario() + "\n"
-                    + "Contraseña:  " + listaFacilitadores.get(indice_user).getContrasena() + "\n");
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "¡Lo sentimos... no se encontró ningún tipo de información!");
-        }
-  
-    }//fin metodo mostrarUsuarioEspecifico
 
     public void desactivarUsuario(String usuario) {
         /* 
