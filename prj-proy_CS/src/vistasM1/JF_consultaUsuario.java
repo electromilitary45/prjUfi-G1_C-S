@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package vistas;
+package vistasM1;
 
 import extensiones.TextPrompt;
 import javax.swing.JOptionPane;
@@ -12,14 +12,14 @@ import prj.proy_cs.cls_funcionesUsuario;
  *
  * @author usuario
  */
-public class JF_desactivarUsuario extends javax.swing.JFrame {
+public class JF_consultaUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form JF_consultaUsuario
      */
-    public JF_desactivarUsuario() {
+    public JF_consultaUsuario() {
         initComponents();
-        TextPrompt txtConsulta = new TextPrompt("Digite el usuario a desactivar", jtf_usuario);
+        TextPrompt txtConsulta = new TextPrompt("Digite el usuario a buscar", jtf_usuario);
     }
 
     /**
@@ -33,7 +33,7 @@ public class JF_desactivarUsuario extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btn_cancelar = new javax.swing.JButton();
-        btn_desactivar = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jtf_usuario = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -61,13 +61,13 @@ public class JF_desactivarUsuario extends javax.swing.JFrame {
         });
         jPanel1.add(btn_cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 110, 30));
 
-        btn_desactivar.setText("DESACTIVAR");
-        btn_desactivar.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton2.setText("BUSCAR");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_desactivarMouseClicked(evt);
+                jButton2MouseClicked(evt);
             }
         });
-        jPanel1.add(btn_desactivar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 110, 30));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 110, 30));
 
         jtf_usuario.setBorder(null);
         jPanel1.add(jtf_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 210, 30));
@@ -75,7 +75,7 @@ public class JF_desactivarUsuario extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_buscar32.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_desactivar64.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_buscar64.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, -1, -1));
 
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
@@ -101,22 +101,22 @@ public class JF_desactivarUsuario extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btn_cancelarMouseClicked
 
-    private void btn_desactivarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_desactivarMouseClicked
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
         if (!jtf_usuario.getText().isBlank() && !jtf_usuario.getText().isEmpty()) {
             String usuario = jtf_usuario.getText();
-            cls_funcionesUsuario clsFU = new cls_funcionesUsuario();
-            clsFU.desactivarUsuario(usuario);
+            cls_funcionesUsuario User = new cls_funcionesUsuario();
+            User.mostrarUsuarioEspecifico(usuario);
             dispose();
 
             JF_menuRegistro JFMR = new JF_menuRegistro();
             JFMR.setVisible(true);
         }else{
-            JOptionPane.showMessageDialog(null, "DEBE RELLENAR LOS ESPACIO REQUERIDOS");
+            JOptionPane.showMessageDialog(null, "DEBE RELLENAR LOS ESPACION REQUERIDOS");
         }
 
 
-    }//GEN-LAST:event_btn_desactivarMouseClicked
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -135,28 +135,27 @@ public class JF_desactivarUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JF_desactivarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JF_consultaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JF_desactivarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JF_consultaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JF_desactivarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JF_consultaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JF_desactivarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JF_consultaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JF_desactivarUsuario().setVisible(true);
+                new JF_consultaUsuario().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_cancelar;
-    private javax.swing.JButton btn_desactivar;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

@@ -1,7 +1,5 @@
 package prj.proy_cs;
 
-import vistas.JF_menu;
-
 public class Main {
 
     public static void main(String[] args) {

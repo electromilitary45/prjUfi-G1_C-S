@@ -2,8 +2,7 @@
 package prj.proy_cs;
 
 import java.util.LinkedList;
-import vistas.JF_menu;
-import vistas.JF_menuRegistro;
+import vistasM1.JF_menuRegistro;
 
 /**
  * 
