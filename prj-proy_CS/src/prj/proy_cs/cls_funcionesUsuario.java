@@ -120,19 +120,23 @@ public class cls_funcionesUsuario {
     }//fin metodo mostrarUsuarioEspecifico
 
     public void mostrarUsuariosActivos() {
+        /*
         for (int x = 0; x < listaUsuarios.size(); x++) {
             if (listaUsuarios.get(x).isStatus()) {
                 JOptionPane.showMessageDialog(null, "La lista es: " + listaUsuarios.get(x).getUsuario());
             }
         }
+        */
     }
 
     public void mostrarUsuariosInactivos() {
+        /*
         for (int x = 0; x < listaUsuarios.size(); x++) {
             if (!listaUsuarios.get(x).isStatus()) {
                 JOptionPane.showMessageDialog(null, "La lista es: " + listaUsuarios.get(x).getUsuario());
             }
         }
+        */
     }
 
     public void desactivarUsuario(String usuario) {
