@@ -4,10 +4,16 @@
  */
 package prj.proy_cs;
 
+//-----------------IMPORTS-----------------
+import java.util.ArrayList;
+
+
 /**
  *
  * @author Derek
  */
 public class cls_funcionesM2 {
+    //--------------LISTAS--------------
+    //protected static ArrayList<Cls_clientes> listaClientes = new ArrayList<Cls_clientes>();
     
-}
+}//fin cls_funcionesM2()
