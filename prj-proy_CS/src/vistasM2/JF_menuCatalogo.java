@@ -26,21 +26,50 @@ public class JF_menuCatalogo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        ico_registroUsu = new javax.swing.JLabel();
+        ico_lista = new javax.swing.JLabel();
+        ico_desactivarUsuario = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ico_registroUsu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_UsuRegistro.png"))); // NOI18N
+        ico_registroUsu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_registroUsuMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ico_registroUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+
+        ico_lista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_lista128.png"))); // NOI18N
+        jPanel1.add(ico_lista, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+
+        ico_desactivarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_UsuDesactivar.png"))); // NOI18N
+        ico_desactivarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_desactivarUsuarioMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ico_desactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ico_registroUsuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_registroUsuMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_ico_registroUsuMouseClicked
+
+    private void ico_desactivarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_desactivarUsuarioMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_ico_desactivarUsuarioMouseClicked
 
     /**
      * @param args the command line arguments
@@ -78,5 +107,9 @@ public class JF_menuCatalogo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ico_desactivarUsuario;
+    private javax.swing.JLabel ico_lista;
+    private javax.swing.JLabel ico_registroUsu;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
