@@ -4,6 +4,8 @@
  */
 package vistasM2;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Derek
@@ -26,21 +28,116 @@ public class JF_menuRegistro_m2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        ico_registroUsu = new javax.swing.JLabel();
+        ico_lista = new javax.swing.JLabel();
+        ico_desactivarUsuario = new javax.swing.JLabel();
+        ico_editarUsuario = new javax.swing.JLabel();
+        jbl_DesactivarUsuarios = new javax.swing.JLabel();
+        jbl_resgistroUsu1 = new javax.swing.JLabel();
+        jbl_listarUsuarios = new javax.swing.JLabel();
+        jbl_editarUsuario = new javax.swing.JLabel();
+        ico_retrocerder = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ico_registroUsu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_UsuRegistro.png"))); // NOI18N
+        ico_registroUsu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_registroUsuMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ico_registroUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
+
+        ico_lista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_lista128.png"))); // NOI18N
+        ico_lista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_listaMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ico_lista, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
+
+        ico_desactivarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_UsuDesactivar.png"))); // NOI18N
+        ico_desactivarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_desactivarUsuarioMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ico_desactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, -1, -1));
+
+        ico_editarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_editarUsuario.png"))); // NOI18N
+        ico_editarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_editarUsuarioMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ico_editarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, -1, -1));
+
+        jbl_DesactivarUsuarios.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jbl_DesactivarUsuarios.setForeground(new java.awt.Color(255, 255, 255));
+        jbl_DesactivarUsuarios.setText("DESACTIVAR USUARIO");
+        jPanel1.add(jbl_DesactivarUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 150, -1));
+
+        jbl_resgistroUsu1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jbl_resgistroUsu1.setForeground(new java.awt.Color(255, 255, 255));
+        jbl_resgistroUsu1.setText("NUEVO USUARIO");
+        jPanel1.add(jbl_resgistroUsu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+
+        jbl_listarUsuarios.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jbl_listarUsuarios.setForeground(new java.awt.Color(255, 255, 255));
+        jbl_listarUsuarios.setText("LISTAR USUARIOS");
+        jPanel1.add(jbl_listarUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
+
+        jbl_editarUsuario.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jbl_editarUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jbl_editarUsuario.setText("EDITAR USUARIOS");
+        jPanel1.add(jbl_editarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 110, -1));
+
+        ico_retrocerder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_retroceder.png"))); // NOI18N
+        ico_retrocerder.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_retrocerderMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ico_retrocerder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ico_registroUsuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_registroUsuMouseClicked
+        // TODO add your handling code here:
+        dispose();
+        JF_registroUsuario_m2 JFR = new JF_registroUsuario_m2();
+        JFR.setVisible(true);
+    }//GEN-LAST:event_ico_registroUsuMouseClicked
+
+    private void ico_desactivarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_desactivarUsuarioMouseClicked
+        // TODO add your handling code here:
+        dispose();
+        new JF_desactivarUsuario_m2().setVisible(true);
+    }//GEN-LAST:event_ico_desactivarUsuarioMouseClicked
+
+    private void ico_retrocerderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_retrocerderMouseClicked
+        // TODO add your handling code here:
+        dispose();
+        new JF_menuCatalogo().setVisible(true);
+    }//GEN-LAST:event_ico_retrocerderMouseClicked
+
+    private void ico_listaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_listaMouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "OPCION NO DISPONIBLE || CREAR VISTA");
+    }//GEN-LAST:event_ico_listaMouseClicked
+
+    private void ico_editarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_editarUsuarioMouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "OPCION NO DISPONIBLE || CREAR VISTA");
+    }//GEN-LAST:event_ico_editarUsuarioMouseClicked
 
     /**
      * @param args the command line arguments
@@ -78,5 +175,15 @@ public class JF_menuRegistro_m2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ico_desactivarUsuario;
+    private javax.swing.JLabel ico_editarUsuario;
+    private javax.swing.JLabel ico_lista;
+    private javax.swing.JLabel ico_registroUsu;
+    private javax.swing.JLabel ico_retrocerder;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jbl_DesactivarUsuarios;
+    private javax.swing.JLabel jbl_editarUsuario;
+    private javax.swing.JLabel jbl_listarUsuarios;
+    private javax.swing.JLabel jbl_resgistroUsu1;
     // End of variables declaration//GEN-END:variables
 }

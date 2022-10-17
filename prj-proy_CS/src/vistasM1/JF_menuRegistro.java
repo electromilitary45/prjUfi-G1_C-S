@@ -4,6 +4,7 @@
  */
 package vistasM1;
 
+import javax.swing.JOptionPane;
 import prj.proy_cs.JF_menu;
 
 /**
@@ -20,6 +21,7 @@ public class JF_menuRegistro extends javax.swing.JFrame {
      */
     public JF_menuRegistro() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -99,6 +101,11 @@ public class JF_menuRegistro extends javax.swing.JFrame {
         jPanel1.add(jbl_desactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, -1, -1));
 
         ico_lista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_lista128.png"))); // NOI18N
+        ico_lista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_listaMouseClicked(evt);
+            }
+        });
         jPanel1.add(ico_lista, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
 
         jbl_desactivarUsuario1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -138,6 +145,12 @@ public class JF_menuRegistro extends javax.swing.JFrame {
         JF_desactivarUsuario JFDU = new JF_desactivarUsuario();
         JFDU.setVisible(true);
     }//GEN-LAST:event_ico_desactivarUsuarioMouseClicked
+
+    private void ico_listaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_listaMouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "APARTADO NO DISPONIBLE || FALTA CREAR");
+        
+    }//GEN-LAST:event_ico_listaMouseClicked
 
     /**
      * @param args the command line arguments

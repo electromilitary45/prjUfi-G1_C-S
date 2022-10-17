@@ -20,6 +20,7 @@ public class JF_desactivarUsuario extends javax.swing.JFrame {
     public JF_desactivarUsuario() {
         initComponents();
         TextPrompt txtConsulta = new TextPrompt("Digite el usuario a desactivar", jtf_usuario);
+        setLocationRelativeTo(null);
     }
 
     /**

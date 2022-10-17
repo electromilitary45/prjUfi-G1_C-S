@@ -95,7 +95,8 @@ public class cls_funcionesUsuario {
                     + "Apellido: " + listaClientes.get(indice_user).getApellido() + "\n"
                     + "Usuario: " + listaClientes.get(indice_user).getUsuario() + "\n"
                     + "Contraseña:  " + listaClientes.get(indice_user).getContrasena() + "\n"
-                    + "Tipo: " + tipo);
+                    + "Tipo: " + tipo
+                    + "ESTADO: " + listaClientes.get(indice_user).isStatus());
 
         } else if (encontroFam != false) {
             JOptionPane.showMessageDialog(null,
@@ -104,7 +105,8 @@ public class cls_funcionesUsuario {
                     + "Apellido: " + listaFamiliares.get(indice_user).getApellido() + "\n"
                     + "Usuario: " + listaFamiliares.get(indice_user).getUsuario() + "\n"
                     + "Contraseña:  " + listaFamiliares.get(indice_user).getContrasena() + "\n"
-                    + "Tipo: " + tipo);
+                    + "Tipo: " + tipo
+                    + "ESTADO: " + listaFamiliares.get(indice_user).isStatus());
         } else if (encontroFaci != false) {
             JOptionPane.showMessageDialog(null,
                     "-----DATOS DE USUARIO-----\n"
@@ -112,33 +114,15 @@ public class cls_funcionesUsuario {
                     + "Apellido: " + listaFacilitadores.get(indice_user).getApellido() + "\n"
                     + "Usuario: " + listaFacilitadores.get(indice_user).getUsuario() + "\n"
                     + "Contraseña:  " + listaFacilitadores.get(indice_user).getContrasena() + "\n"
-                    + "Tipo: " + tipo);
+                    + "Tipo: " + tipo
+                    + "ESTADO: " + listaFacilitadores.get(indice_user).isStatus());
         } else {
             JOptionPane.showMessageDialog(null, "¡Lo sentimos... no se encontró ningún tipo de información!");
         }
 
     }//fin metodo mostrarUsuarioEspecifico
 
-    public void mostrarUsuariosActivos() {
-        /*
-        for (int x = 0; x < listaUsuarios.size(); x++) {
-            if (listaUsuarios.get(x).isStatus()) {
-                JOptionPane.showMessageDialog(null, "La lista es: " + listaUsuarios.get(x).getUsuario());
-            }
-        }
-        */
-    }
-
-    public void mostrarUsuariosInactivos() {
-        /*
-        for (int x = 0; x < listaUsuarios.size(); x++) {
-            if (!listaUsuarios.get(x).isStatus()) {
-                JOptionPane.showMessageDialog(null, "La lista es: " + listaUsuarios.get(x).getUsuario());
-            }
-        }
-        */
-    }
-
+    /*
     public void desactivarUsuario(String usuario) {
         /* 
         
@@ -152,7 +136,61 @@ public class cls_funcionesUsuario {
             }
         }
 
-         */
-    }//fin Desactivar
+     
+    }*///fin Desactivar
+    public void desactivarUsuario(String usuario) {
 
+        boolean desactivado = false; // solo se activa si el usuario fue encontrado y desactivado || se utiliza para mensaje
+        boolean encontrado = false;
+        //---LISTA CLIENTES--
+        for (int x = 0; x < listaClientes.size(); x++) {
+            if (listaClientes.get(x).getUsuario().equals(usuario)) {
+                encontrado = true;
+                if (listaClientes.get(x).isStatus() == false) {
+
+                    JOptionPane.showMessageDialog(null, "Error usuario previamente desactivado");
+                } else {
+                    listaClientes.get(x).setStatus(false);
+                    JOptionPane.showMessageDialog(null, "DESACTIVADO CON EXITO");
+                    desactivado = true;
+                }
+
+            }
+        }//fin clietnes
+
+        //--Lista Familiares--
+        for (int x = 0; x < listaFamiliares.size(); x++) {
+            if (listaFamiliares.get(x).getUsuario().equals(usuario)) {
+                encontrado = true;
+                if (listaFamiliares.get(x).isStatus() == false) {
+
+                    JOptionPane.showMessageDialog(null, "Error usuario previamente desactivado");
+                } else {
+                    listaFamiliares.get(x).setStatus(false);
+                    JOptionPane.showMessageDialog(null, "DESACTIVADO CON EXITO");
+                    desactivado = true;
+                }
+
+            }
+        }
+        //--Lista Facilitadores--
+        for (int x = 0; x < listaFacilitadores.size(); x++) {
+            if (listaFacilitadores.get(x).getUsuario().equals(usuario)) {
+                encontrado = true;
+                if (listaFacilitadores.get(x).isStatus() == false) {
+
+                    JOptionPane.showMessageDialog(null, "Error usuario previamente desactivado");
+                } else {
+                    listaFacilitadores.get(x).setStatus(false);
+                    JOptionPane.showMessageDialog(null, "DESACTIVADO CON EXITO");
+                    desactivado = true;
+                }
+
+            }
+        }
+        //--MENSAJE DE NO ENCONTRADO--
+        if (desactivado == false && encontrado == false) {
+            JOptionPane.showMessageDialog(null, "Usuario no encontrado");
+        }
+    }
 }//fin clasFunciones

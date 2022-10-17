@@ -19,6 +19,7 @@ public class JF_consultaUsuario extends javax.swing.JFrame {
      */
     public JF_consultaUsuario() {
         initComponents();
+        setLocationRelativeTo(null);
         TextPrompt txtConsulta = new TextPrompt("Digite el usuario a buscar", jtf_usuario);
     }
 

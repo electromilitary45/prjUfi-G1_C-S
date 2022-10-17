@@ -4,6 +4,8 @@
  */
 package vistasM2;
 
+import prj.proy_cs.JF_menu;
+
 /**
  *
  * @author Derek
@@ -14,6 +16,7 @@ public class JF_menuCatalogo extends javax.swing.JFrame {
      * Creates new form JF_menuCatalogo
      */
     public JF_menuCatalogo() {
+        
         initComponents();
     }
 
@@ -26,10 +29,21 @@ public class JF_menuCatalogo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jbl_resgistroUsu3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        ico_registroUsu = new javax.swing.JLabel();
-        ico_lista = new javax.swing.JLabel();
-        ico_desactivarUsuario = new javax.swing.JLabel();
+        ico_catDeportes = new javax.swing.JLabel();
+        jbl_catDeportes = new javax.swing.JLabel();
+        ico_retrocerder = new javax.swing.JLabel();
+        ico_catUsuarios = new javax.swing.JLabel();
+        jbl_Catusuarios1 = new javax.swing.JLabel();
+        ico_catRutinas = new javax.swing.JLabel();
+        jbl_rutinas = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jbl_Catusuarios2 = new javax.swing.JLabel();
+
+        jbl_resgistroUsu3.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jbl_resgistroUsu3.setForeground(new java.awt.Color(255, 255, 255));
+        jbl_resgistroUsu3.setText("DESACTIVAR USUARIOS");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -37,39 +51,70 @@ public class JF_menuCatalogo extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ico_registroUsu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_UsuRegistro.png"))); // NOI18N
-        ico_registroUsu.addMouseListener(new java.awt.event.MouseAdapter() {
+        ico_catDeportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_deportes128.png"))); // NOI18N
+        jPanel1.add(ico_catDeportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, -1, -1));
+
+        jbl_catDeportes.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jbl_catDeportes.setForeground(new java.awt.Color(255, 255, 255));
+        jbl_catDeportes.setText("DEPORTES");
+        jPanel1.add(jbl_catDeportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
+
+        ico_retrocerder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_retroceder.png"))); // NOI18N
+        ico_retrocerder.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ico_registroUsuMouseClicked(evt);
+                ico_retrocerderMouseClicked(evt);
             }
         });
-        jPanel1.add(ico_registroUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        jPanel1.add(ico_retrocerder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        ico_lista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_lista128.png"))); // NOI18N
-        jPanel1.add(ico_lista, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
-
-        ico_desactivarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_UsuDesactivar.png"))); // NOI18N
-        ico_desactivarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+        ico_catUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_usuarios128.png"))); // NOI18N
+        ico_catUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ico_desactivarUsuarioMouseClicked(evt);
+                ico_catUsuariosMouseClicked(evt);
             }
         });
-        jPanel1.add(ico_desactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
+        jPanel1.add(ico_catUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 470));
+        jbl_Catusuarios1.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        jbl_Catusuarios1.setForeground(new java.awt.Color(255, 255, 255));
+        jbl_Catusuarios1.setText("CATALOGOS");
+        jPanel1.add(jbl_Catusuarios1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
+
+        ico_catRutinas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_rutinas128.png"))); // NOI18N
+        jPanel1.add(ico_catRutinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
+
+        jbl_rutinas.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jbl_rutinas.setForeground(new java.awt.Color(255, 255, 255));
+        jbl_rutinas.setText("RUTINAS");
+        jPanel1.add(jbl_rutinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, -1, -1));
+
+        jSeparator1.setBackground(new java.awt.Color(255, 255, 51));
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 51));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 270, 20));
+
+        jbl_Catusuarios2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jbl_Catusuarios2.setForeground(new java.awt.Color(255, 255, 255));
+        jbl_Catusuarios2.setText("USUARIOS");
+        jPanel1.add(jbl_Catusuarios2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ico_registroUsuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_registroUsuMouseClicked
+    private void ico_retrocerderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_retrocerderMouseClicked
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_ico_registroUsuMouseClicked
+        dispose();
+        JF_menu JFM = new JF_menu();
+        JFM.setVisible(true);
+    }//GEN-LAST:event_ico_retrocerderMouseClicked
 
-    private void ico_desactivarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_desactivarUsuarioMouseClicked
+    private void ico_catUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_catUsuariosMouseClicked
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_ico_desactivarUsuarioMouseClicked
+        dispose();
+        JF_menuRegistro_m2 JF =new JF_menuRegistro_m2();
+        JF.setVisible(true);
+    }//GEN-LAST:event_ico_catUsuariosMouseClicked
 
     /**
      * @param args the command line arguments
@@ -107,9 +152,16 @@ public class JF_menuCatalogo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ico_desactivarUsuario;
-    private javax.swing.JLabel ico_lista;
-    private javax.swing.JLabel ico_registroUsu;
+    private javax.swing.JLabel ico_catDeportes;
+    private javax.swing.JLabel ico_catRutinas;
+    private javax.swing.JLabel ico_catUsuarios;
+    private javax.swing.JLabel ico_retrocerder;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel jbl_Catusuarios1;
+    private javax.swing.JLabel jbl_Catusuarios2;
+    private javax.swing.JLabel jbl_catDeportes;
+    private javax.swing.JLabel jbl_resgistroUsu3;
+    private javax.swing.JLabel jbl_rutinas;
     // End of variables declaration//GEN-END:variables
 }

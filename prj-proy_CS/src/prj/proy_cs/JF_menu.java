@@ -8,6 +8,8 @@ import java.awt.Color;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
 import prj.proy_cs.cls_menuPrincipal;
+import vistasM1.JF_menuRegistro;
+import vistasM2.JF_menuCatalogo;
 
 /**
  *
@@ -100,6 +102,11 @@ public class JF_menu extends javax.swing.JFrame {
         panelP.add(lbl_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
 
         ico_catalogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_catalogo.png"))); // NOI18N
+        ico_catalogo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_catalogoMouseClicked(evt);
+            }
+        });
         panelP.add(ico_catalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, -1, -1));
 
         lbl_catalogo.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -149,10 +156,12 @@ public class JF_menu extends javax.swing.JFrame {
 
     private void ico_registroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_registroMouseClicked
         // TODO add your handling code here:
-        cls_menuPrincipal clsMP = new cls_menuPrincipal();
+        /*cls_menuPrincipal clsMP = new cls_menuPrincipal();
         char op='A';
-        clsMP.menuP(op);
+        clsMP.menuP(op);*/
         dispose();
+        JF_menuRegistro JF = new JF_menuRegistro();
+        JF.setVisible(true);
         
     }//GEN-LAST:event_ico_registroMouseClicked
 
@@ -171,6 +180,14 @@ public class JF_menu extends javax.swing.JFrame {
         ico_registro.setBackground(Color.YELLOW);
         ico_registro.setOpaque(true);
     }//GEN-LAST:event_ico_registroMouseEntered
+
+    private void ico_catalogoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_catalogoMouseClicked
+        // TODO add your handling code here:
+        JF_menuCatalogo JF = new JF_menuCatalogo();
+        dispose();
+        JF.setVisible(true);
+        
+    }//GEN-LAST:event_ico_catalogoMouseClicked
 
     /**
      * @param args the command line arguments

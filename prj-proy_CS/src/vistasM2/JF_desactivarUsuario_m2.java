@@ -4,10 +4,11 @@
  */
 package vistasM2;
 
-import vistasM1.*;
+
 import extensiones.TextPrompt;
 import javax.swing.JOptionPane;
-import prj.proy_cs.cls_funcionesUsuario;
+import prj.proy_cs.cls_funcionesM2;
+
 
 /**
  *
@@ -20,7 +21,7 @@ public class JF_desactivarUsuario_m2 extends javax.swing.JFrame {
      */
     public JF_desactivarUsuario_m2() {
         initComponents();
-        TextPrompt txtConsulta = new TextPrompt("Digite el usuario a desactivar", jtf_usuario);
+        TextPrompt txtConsulta = new TextPrompt("Digite la cedula del usuario", jtf_cedula);
     }
 
     /**
@@ -35,7 +36,7 @@ public class JF_desactivarUsuario_m2 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btn_cancelar = new javax.swing.JButton();
         btn_desactivar = new javax.swing.JButton();
-        jtf_usuario = new javax.swing.JTextField();
+        jtf_cedula = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -70,8 +71,8 @@ public class JF_desactivarUsuario_m2 extends javax.swing.JFrame {
         });
         jPanel1.add(btn_desactivar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 110, 30));
 
-        jtf_usuario.setBorder(null);
-        jPanel1.add(jtf_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 210, 30));
+        jtf_cedula.setBorder(null);
+        jPanel1.add(jtf_cedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 210, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_buscar32.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
@@ -95,22 +96,20 @@ public class JF_desactivarUsuario_m2 extends javax.swing.JFrame {
     private void btn_cancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_cancelarMouseClicked
         // TODO add your handling code here:
         dispose();
-
-        JF_menuRegistro JFMR = new JF_menuRegistro();
-        JFMR.setVisible(true);
+        new JF_menuRegistro_m2().setVisible(true);
 
 
     }//GEN-LAST:event_btn_cancelarMouseClicked
 
     private void btn_desactivarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_desactivarMouseClicked
         // TODO add your handling code here:
-        if (!jtf_usuario.getText().isBlank() && !jtf_usuario.getText().isEmpty()) {
-            String usuario = jtf_usuario.getText();
-            cls_funcionesUsuario clsFU = new cls_funcionesUsuario();
-            clsFU.desactivarUsuario(usuario);
+        if (!jtf_cedula.getText().isBlank() && !jtf_cedula.getText().isEmpty()) {
+            String cedula = jtf_cedula.getText();
+            cls_funcionesM2 clsF = new cls_funcionesM2();
+            //clsFU.desactivarUsuario(usuario);
             dispose();
 
-            JF_menuRegistro JFMR = new JF_menuRegistro();
+            JF_menuRegistro_m2 JFMR = new JF_menuRegistro_m2();
             JFMR.setVisible(true);
         }else{
             JOptionPane.showMessageDialog(null, "DEBE RELLENAR LOS ESPACIO REQUERIDOS");
@@ -164,6 +163,6 @@ public class JF_desactivarUsuario_m2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jtf_usuario;
+    private javax.swing.JTextField jtf_cedula;
     // End of variables declaration//GEN-END:variables
 }

@@ -19,6 +19,7 @@ public class JF_registroUsuario extends javax.swing.JFrame {
      * Creates new form JF_registroUsuario
      */
     public JF_registroUsuario() {
+        setLocationRelativeTo(null);
         initComponents();
         TextPrompt txtNombre = new TextPrompt("Digite su nombre", jtf_nombre);
         TextPrompt txtApe = new TextPrompt("Digite su apellido", jtf_apellido);
