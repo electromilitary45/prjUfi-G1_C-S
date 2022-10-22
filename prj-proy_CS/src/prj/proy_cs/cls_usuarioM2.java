@@ -1,8 +1,9 @@
 
 package prj.proy_cs;
+
 import javax.swing.JOptionPane;
-public class cls_usuarioM2 extends cls_funcionesUsuarioM2{
-    
+
+public class cls_usuarioM2 {
     
     private String nombre;
     private String apellido;
@@ -11,6 +12,15 @@ public class cls_usuarioM2 extends cls_funcionesUsuarioM2{
     private String telefono;
     private Boolean status;
 
+    public cls_usuarioM2(String nombre, String apellido, String cedula, String mail, String telefono, Boolean status) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.cedula = cedula;
+        this.mail = mail;
+        this.telefono = telefono;
+        this.status = status;
+    }
+    
     public cls_usuarioM2() {
         this.nombre = " ";
         this.apellido = " ";
@@ -19,6 +29,8 @@ public class cls_usuarioM2 extends cls_funcionesUsuarioM2{
         this.telefono = " ";
         this.status = true;
     }
+
+    
 
     public String getNombre() {
         return nombre;
