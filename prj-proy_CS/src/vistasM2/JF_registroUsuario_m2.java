@@ -4,9 +4,11 @@
  */
 package vistasM2;
 
-import vistasM1.*;
+import vistasM2.*;
 import extensiones.TextPrompt;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
+import prj.proy_cs.cls_funcionesM2;
 import prj.proy_cs.cls_funcionesUsuario;
 
 /**
@@ -23,7 +25,11 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
         initComponents();
         TextPrompt txtNombre = new TextPrompt("Digite su nombre", jtf_nombre);
         TextPrompt txtApe = new TextPrompt("Digite su apellido", jtf_apellido);
-        TextPrompt txtCedula = new TextPrompt("Digite su cedula", jtf_email);
+        TextPrompt txtCedula = new TextPrompt("Digite su cedula", jtf_cedula);
+        TextPrompt txtamil = new TextPrompt("Digite su mail", jtf_telefono);
+        TextPrompt txttel = new TextPrompt("Digite su telefono", jtf_telefono);
+        cbx_ninos.setEnabled(false);
+        llenarCmb();
     }
 
     /**
@@ -38,7 +44,7 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jtf_apellido = new javax.swing.JTextField();
         cbx_tipoUsuario = new javax.swing.JComboBox<>();
-        jtf_email = new javax.swing.JTextField();
+        jtf_telefono = new javax.swing.JTextField();
         jtf_nombre = new javax.swing.JTextField();
         btn_crear = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
@@ -52,11 +58,11 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
-        jtf_Usuario1 = new javax.swing.JTextField();
-        jtf_email1 = new javax.swing.JTextField();
+        jtf_cedula = new javax.swing.JTextField();
+        jtf_email = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cbx_ninos = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 51, 51));
@@ -71,6 +77,11 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
         jPanel1.add(jtf_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 250, 20));
 
         cbx_tipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TIPO DE USUARIO", "DEPORTISTA", "PADRE" }));
+        cbx_tipoUsuario.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbx_tipoUsuarioItemStateChanged(evt);
+            }
+        });
         cbx_tipoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbx_tipoUsuarioActionPerformed(evt);
@@ -83,13 +94,13 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
         });
         jPanel1.add(cbx_tipoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 250, -1));
 
-        jtf_email.setBorder(null);
-        jtf_email.addActionListener(new java.awt.event.ActionListener() {
+        jtf_telefono.setBorder(null);
+        jtf_telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_emailActionPerformed(evt);
+                jtf_telefonoActionPerformed(evt);
             }
         });
-        jPanel1.add(jtf_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 250, 20));
+        jPanel1.add(jtf_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 250, 20));
 
         jtf_nombre.setBorder(null);
         jtf_nombre.addActionListener(new java.awt.event.ActionListener() {
@@ -154,21 +165,21 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_numTel24.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
-        jtf_Usuario1.setBorder(null);
-        jtf_Usuario1.addActionListener(new java.awt.event.ActionListener() {
+        jtf_cedula.setBorder(null);
+        jtf_cedula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_Usuario1ActionPerformed(evt);
+                jtf_cedulaActionPerformed(evt);
             }
         });
-        jPanel1.add(jtf_Usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 250, 20));
+        jPanel1.add(jtf_cedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 250, 20));
 
-        jtf_email1.setBorder(null);
-        jtf_email1.addActionListener(new java.awt.event.ActionListener() {
+        jtf_email.setBorder(null);
+        jtf_email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_email1ActionPerformed(evt);
+                jtf_emailActionPerformed(evt);
             }
         });
-        jPanel1.add(jtf_email1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 250, 20));
+        jPanel1.add(jtf_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 250, 20));
 
         jSeparator5.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
@@ -177,8 +188,8 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_mail24.png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCION UN NIÑO" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 250, -1));
+        cbx_ninos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCION UN NIÑO" }));
+        jPanel1.add(cbx_ninos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 250, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 430));
 
@@ -187,26 +198,49 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
 
     private void btn_crearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_crearMouseClicked
         // TODO add your handling code here:]
-        /*cls_funcionesUsuario clsFU = new cls_funcionesUsuario();
-        if (!jtf_Usuario.getText().isEmpty() && !jtf_Usuario.getText().isBlank() && !jtf_nombre.getText().isEmpty()
-                && !jtf_nombre.getText().isBlank()
-                && !jtf_apellido.getText().isEmpty() && !jtf_Usuario.getText().isBlank()
-                && cbx_tipoUsuario.getSelectedIndex() != 0 && !String.valueOf(jtp_pass.getPassword()).isBlank()
-                && !String.valueOf(jtp_pass.getPassword()).isEmpty()) {
+        try {
+            if (!jtf_nombre.getText().isBlank() && !jtf_nombre.getText().isEmpty()
+                    && !jtf_apellido.getText().isBlank() && !jtf_apellido.getText().isEmpty()
+                    && !jtf_cedula.getText().isBlank() && !jtf_cedula.getText().isEmpty()
+                    && !jtf_email.getText().isBlank() && !jtf_email.getText().isEmpty()
+                    && !jtf_telefono.getText().isBlank() && !jtf_telefono.getText().isEmpty()
+                    && cbx_tipoUsuario.getSelectedIndex() != 0) {
 
-            String nombre = jtf_nombre.getText();
-            String ape = jtf_apellido.getText();
-            String User = jtf_Usuario.getText();
-            String pass = String.valueOf(jtp_pass.getPassword());
-            int tipo = cbx_tipoUsuario.getSelectedIndex();
+                cls_funcionesM2 FM = new cls_funcionesM2();
+                String nombre = jtf_nombre.getText();
+                String apellido = jtf_apellido.getText();
+                String cedula = jtf_cedula.getText();
+                String mail = jtf_email.getText();
+                String numtel = jtf_telefono.getText();
 
-            clsFU.crearUsuario(nombre, ape, tipo, User, pass);
+                int tipo = cbx_tipoUsuario.getSelectedIndex();
+                String nombreNino = "";
+
+                if (tipo == 1) {
+                    FM.agregarUsuarios(nombre, apellido, cedula, mail, numtel, tipo, nombreNino);
+                    JOptionPane.showMessageDialog(null, "NIÑO CREADO CORRECTAMENTE");
+                    dispose();
+                    new JF_menuUsuarios_m2().setVisible(true);
+
+                } else {
+                    if (cbx_ninos.getSelectedItem() == null) {
+                        JOptionPane.showMessageDialog(null, "DEBE SELECCIONAR UN NIÑO ");
+                    } else {
+                        nombreNino = (String) cbx_ninos.getSelectedItem();
+                        FM.agregarUsuarios(nombre, apellido, cedula, mail, numtel, tipo, nombreNino);
+                        JOptionPane.showMessageDialog(null, "PADRE CREADO CORRECTAMENTE");
+                        dispose();
+                        new JF_menuUsuarios_m2().setVisible(true);
+                    }
+                }
+
+            } else {
+                JOptionPane.showMessageDialog(null, "DEBER RELLENAR LOS DATOS");
+            }
+        } catch (Exception e) {
             dispose();
-            JF_menuRegistro JFM = new JF_menuRegistro();
-            JFM.setVisible(true);
-        } else {
-            JOptionPane.showMessageDialog(null, "DEBE LLENAR ESPACION REQUERIDOS");
-        }*/
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
 
 
     }//GEN-LAST:event_btn_crearMouseClicked
@@ -219,9 +253,9 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtf_nombreActionPerformed
 
-    private void jtf_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_emailActionPerformed
+    private void jtf_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_telefonoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_emailActionPerformed
+    }//GEN-LAST:event_jtf_telefonoActionPerformed
 
     private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelarActionPerformed
         // TODO add your handling code here:
@@ -230,7 +264,7 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
     private void btn_cancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_cancelarMouseClicked
         // TODO add your handling code here:
         dispose();
-        JF_menuRegistro_m2 JFM = new JF_menuRegistro_m2();
+        JF_menuUsuarios_m2 JFM = new JF_menuUsuarios_m2();
         JFM.setVisible(true);
     }//GEN-LAST:event_btn_cancelarMouseClicked
 
@@ -238,13 +272,24 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cbx_tipoUsuarioPropertyChange
 
-    private void jtf_Usuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_Usuario1ActionPerformed
+    private void jtf_cedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_cedulaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_Usuario1ActionPerformed
+    }//GEN-LAST:event_jtf_cedulaActionPerformed
 
-    private void jtf_email1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_email1ActionPerformed
+    private void jtf_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_emailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_email1ActionPerformed
+    }//GEN-LAST:event_jtf_emailActionPerformed
+
+    private void cbx_tipoUsuarioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbx_tipoUsuarioItemStateChanged
+        // TODO add your handling code here:
+        if (cbx_tipoUsuario.getSelectedIndex() == 1 || cbx_tipoUsuario.getSelectedIndex() == 0) {
+            cbx_ninos.setEnabled(false);
+        }
+
+        if (cbx_tipoUsuario.getSelectedIndex() == 2) {
+            cbx_ninos.setEnabled(true);
+        }
+    }//GEN-LAST:event_cbx_tipoUsuarioItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -285,8 +330,8 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_cancelar;
     private javax.swing.JButton btn_crear;
+    private javax.swing.JComboBox<String> cbx_ninos;
     private javax.swing.JComboBox<String> cbx_tipoUsuario;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -300,10 +345,35 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JTextField jtf_Usuario1;
     private javax.swing.JTextField jtf_apellido;
+    private javax.swing.JTextField jtf_cedula;
     private javax.swing.JTextField jtf_email;
-    private javax.swing.JTextField jtf_email1;
     private javax.swing.JTextField jtf_nombre;
+    private javax.swing.JTextField jtf_telefono;
     // End of variables declaration//GEN-END:variables
+
+    private void llenarCmb() {
+        String vecNombres[] = new String[99999];
+
+        int cont = 0;
+        cls_funcionesM2 FM = new cls_funcionesM2();
+        FM.llenarcmbBxninos(vecNombres);
+
+        for (int i = 0; i < vecNombres.length; i++) {
+            if (vecNombres[i] != null) {
+                cont++;
+            }
+        }
+        String vecNombres2[] = new String[cont];
+        cont = 0;
+        for (int i = 0; i < vecNombres.length; i++) {
+            if (vecNombres[i] != null) {
+
+                vecNombres2[cont] = vecNombres[i];
+                cont++;
+            }
+        }
+
+        cbx_ninos.setModel(new DefaultComboBoxModel<>(vecNombres2));
+    }
 }

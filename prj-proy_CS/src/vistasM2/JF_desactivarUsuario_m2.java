@@ -69,6 +69,11 @@ public class JF_desactivarUsuario_m2 extends javax.swing.JFrame {
                 btn_desactivarMouseClicked(evt);
             }
         });
+        btn_desactivar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_desactivarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btn_desactivar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 110, 30));
 
         jtf_cedula.setBorder(null);
@@ -96,27 +101,33 @@ public class JF_desactivarUsuario_m2 extends javax.swing.JFrame {
     private void btn_cancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_cancelarMouseClicked
         // TODO add your handling code here:
         dispose();
-        new JF_menuRegistro_m2().setVisible(true);
+        new JF_menuUsuarios_m2().setVisible(true);
 
 
     }//GEN-LAST:event_btn_cancelarMouseClicked
 
     private void btn_desactivarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_desactivarMouseClicked
         // TODO add your handling code here:
+        
+
+
+    }//GEN-LAST:event_btn_desactivarMouseClicked
+
+    private void btn_desactivarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_desactivarActionPerformed
+        // TODO add your handling code here:
         if (!jtf_cedula.getText().isBlank() && !jtf_cedula.getText().isEmpty()) {
             String cedula = jtf_cedula.getText();
             cls_funcionesM2 clsF = new cls_funcionesM2();
-            //clsFU.desactivarUsuario(usuario);
+            clsF.desactivarUsuario(cedula);
+            JOptionPane.showMessageDialog(null, "Desactivado con Exito");
             dispose();
 
-            JF_menuRegistro_m2 JFMR = new JF_menuRegistro_m2();
+            JF_menuUsuarios_m2 JFMR = new JF_menuUsuarios_m2();
             JFMR.setVisible(true);
         }else{
             JOptionPane.showMessageDialog(null, "DEBE RELLENAR LOS ESPACIO REQUERIDOS");
         }
-
-
-    }//GEN-LAST:event_btn_desactivarMouseClicked
+    }//GEN-LAST:event_btn_desactivarActionPerformed
 
     /**
      * @param args the command line arguments

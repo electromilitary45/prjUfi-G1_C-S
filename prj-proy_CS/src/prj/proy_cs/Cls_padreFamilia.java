@@ -1,10 +1,13 @@
 
 package prj.proy_cs;
-import javax.swing.JOptionPane;
+
 public class Cls_padreFamilia extends cls_usuarioM2{
     private int tipo;
     private String nomNino;
 
+    public Cls_padreFamilia() {
+    }
+    
     public Cls_padreFamilia(int tipo, String nomNino, String nombre, String apellido, String cedula, String mail, String telefono, Boolean status) {
         super(nombre, apellido, cedula, mail, telefono, status);
         this.tipo = 2;

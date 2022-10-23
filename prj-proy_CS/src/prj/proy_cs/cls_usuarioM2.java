@@ -13,21 +13,16 @@ public class cls_usuarioM2 {
     private Boolean status;
 
     public cls_usuarioM2(String nombre, String apellido, String cedula, String mail, String telefono, Boolean status) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.cedula = cedula;
-        this.mail = mail;
-        this.telefono = telefono;
-        this.status = status;
+        this.nombre = "";
+        this.apellido = "";
+        this.cedula = "";
+        this.mail = "";
+        this.telefono = "";
+        this.status = true;
     }
     
     public cls_usuarioM2() {
-        this.nombre = " ";
-        this.apellido = " ";
-        this.cedula = " ";
-        this.mail = " ";
-        this.telefono = " ";
-        this.status = true;
+        
     }
 
     

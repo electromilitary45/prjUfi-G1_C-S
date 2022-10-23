@@ -5,17 +5,18 @@
 package vistasM2;
 
 import javax.swing.JOptionPane;
+import prj.proy_cs.cls_funcionesM2;
 
 /**
  *
  * @author Derek
  */
-public class JF_menuRegistro_m2 extends javax.swing.JFrame {
+public class JF_menuUsuarios_m2 extends javax.swing.JFrame {
 
     /**
      * Creates new form JF_menuRegistro_m2
      */
-    public JF_menuRegistro_m2() {
+    public JF_menuUsuarios_m2() {
         initComponents();
     }
 
@@ -131,12 +132,14 @@ public class JF_menuRegistro_m2 extends javax.swing.JFrame {
 
     private void ico_listaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_listaMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "OPCION NO DISPONIBLE || CREAR VISTA");
+        cls_funcionesM2 FM = new cls_funcionesM2();
+        FM.mostrarUsuarios();
     }//GEN-LAST:event_ico_listaMouseClicked
 
     private void ico_editarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_editarUsuarioMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "OPCION NO DISPONIBLE || CREAR VISTA");
+        new JF_editarUsuario().setVisible(true);
+        dispose();
     }//GEN-LAST:event_ico_editarUsuarioMouseClicked
 
     /**
@@ -156,20 +159,21 @@ public class JF_menuRegistro_m2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JF_menuRegistro_m2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JF_menuUsuarios_m2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JF_menuRegistro_m2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JF_menuUsuarios_m2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JF_menuRegistro_m2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JF_menuUsuarios_m2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JF_menuRegistro_m2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JF_menuUsuarios_m2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JF_menuRegistro_m2().setVisible(true);
+                new JF_menuUsuarios_m2().setVisible(true);
             }
         });
     }

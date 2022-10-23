@@ -8,7 +8,9 @@ public class cls_deporte {
     private String nombre;
     private String caracteristicas;
     private Boolean status;
-
+    
+    public cls_deporte(){}
+    
     public cls_deporte(String nombre, String caracteristicas, Boolean status) {
         this.nombre = " ";
         this.caracteristicas = " ";

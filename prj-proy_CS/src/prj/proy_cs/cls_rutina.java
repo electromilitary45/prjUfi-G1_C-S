@@ -1,7 +1,4 @@
-
 package prj.proy_cs;
-
-import javax.swing.JOptionPane;
 
 public class cls_rutina {
     
@@ -9,7 +6,11 @@ public class cls_rutina {
     private String descripcion;
     private String duracion;
     private Boolean status;
-
+    
+    public cls_rutina(){
+        
+    }
+    
     public cls_rutina(String deporteAsignado, String descripcion, String duracion, Boolean status) {
         this.deporteAsignado = " ";
         this.descripcion = " ";

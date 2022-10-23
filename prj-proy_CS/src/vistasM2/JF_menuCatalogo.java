@@ -112,7 +112,7 @@ public class JF_menuCatalogo extends javax.swing.JFrame {
     private void ico_catUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_catUsuariosMouseClicked
         // TODO add your handling code here:
         dispose();
-        JF_menuRegistro_m2 JF =new JF_menuRegistro_m2();
+        JF_menuUsuarios_m2 JF =new JF_menuUsuarios_m2();
         JF.setVisible(true);
     }//GEN-LAST:event_ico_catUsuariosMouseClicked
 
