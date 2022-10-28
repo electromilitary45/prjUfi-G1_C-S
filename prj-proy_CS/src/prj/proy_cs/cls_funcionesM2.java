@@ -60,14 +60,32 @@ public class cls_funcionesM2 {
                     +"\nS- ").toUpperCase().charAt(0);
             switch(op){
                 case 'A':
-                    JOptionPane.showMessageDialog(null,listaDeportistas);
+                    String s="";
+                    for (int i = 0; i < listaDeportistas.size(); i++) {
+                        s=s+listaDeportistas.get(i).getNombre()+"--"+listaDeportistas.get(i).getApellido()+"--"+listaDeportistas.get(i).getCedula()+"--"+listaDeportistas.get(i).getMail()+"--"+listaDeportistas.get(i).getTelefono()+"\n";
+                    }
+                    JOptionPane.showMessageDialog(null, "--Lista Deportistas--\n"+s);
                     break;
                 case 'B':
-                    JOptionPane.showMessageDialog(null,listaPadres);
+                    String p="";
+                    for (int i = 0; i < listaPadres.size(); i++) {
+                        p=p+listaPadres.get(i).getNombre()+"--"+listaPadres.get(i).getApellido()+"--"+listaPadres.get(i).getCedula()+"--"+listaPadres.get(i).getMail()+"--"+listaPadres.get(i).getTelefono()+"--"+listaPadres.get(i).getNomNino()+"\n";
+                    }
+                    JOptionPane.showMessageDialog(null, "--Lista Padres--\n"+p);
                     break;  
                 case 'C':
-                    JOptionPane.showMessageDialog(null,listaPadres);
-                    JOptionPane.showMessageDialog(null,listaDeportistas);
+                    //-----deportistas
+                    String dp="";
+                    for (int i = 0; i < listaDeportistas.size(); i++) {
+                        dp=dp+listaDeportistas.get(i).getNombre()+"--"+listaDeportistas.get(i).getApellido()+"--"+listaDeportistas.get(i).getCedula()+"--"+listaDeportistas.get(i).getMail()+"--"+listaDeportistas.get(i).getTelefono()+"\n";
+                    }
+                    JOptionPane.showMessageDialog(null, "--Lista Deportistas--\n"+dp);
+                    //-----padres
+                    String pd="";
+                    for (int i = 0; i < listaPadres.size(); i++) {
+                        pd=pd+listaPadres.get(i).getNombre()+"--"+listaPadres.get(i).getApellido()+"--"+listaPadres.get(i).getCedula()+"--"+listaPadres.get(i).getMail()+"--"+listaPadres.get(i).getTelefono()+"--"+listaPadres.get(i).getNomNino()+"\n";
+                    }
+                    JOptionPane.showMessageDialog(null, "--Lista Padres--\n"+pd);
                     break;    
                 default:
                     JOptionPane.showMessageDialog(null,"Opción no válida, Intentelo nuevamente","Mostrar usuarios",JOptionPane.WARNING_MESSAGE);
