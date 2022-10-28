@@ -5,9 +5,8 @@
 package prj.proy_cs;
 
 import java.awt.Color;
-import java.util.LinkedList;
-import javax.swing.JOptionPane;
-import prj.proy_cs.cls_menuPrincipal;
+
+
 import vistasM1.JF_menuRegistro;
 import vistasM2.JF_menuCatalogo;
 

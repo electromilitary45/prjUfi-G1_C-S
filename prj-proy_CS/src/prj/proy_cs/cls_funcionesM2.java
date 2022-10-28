@@ -50,7 +50,7 @@ public class cls_funcionesM2 {
     
     //Inicio Menú ListarUsuarios
     
-    public static void mostrarUsuarios(){  
+    public void mostrarUsuarios(){  
          char op=' ';
          while(op !='S'){
             op=JOptionPane.showInputDialog("***Mostrar Usuarios***\n"
