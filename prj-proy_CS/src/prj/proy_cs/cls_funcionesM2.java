@@ -5,6 +5,7 @@
 package prj.proy_cs;
 
 //-----------------IMPORTS-----------------
+import static java.lang.reflect.Array.set;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -49,87 +50,32 @@ public class cls_funcionesM2 {
     
     //Inicio Menú ListarUsuarios
     
-    public static void menuListarUsuarios(){
-         boolean exit = false;
-        do{
-            String opcion=JOptionPane.showInputDialog("***Listado de Usuarios***\n"
-                    +"1-Consultar lista |Deportistas|\n"
-                    +"2-Consultar lista |Padres-Madres de familia|\n"
-                    +"0-Salir del sistema\n");
-            switch(opcion){
-                case 0:
-                    exit=true;
+    public static void mostrarUsuarios(){  
+         char op=' ';
+         while(op !='S'){
+            op=JOptionPane.showInputDialog("***Mostrar Usuarios***\n"
+                    +"\nA-Imprimir Deportistas"
+                    +"\nB-Imprimir Padres"
+                    +"\nC-Imprimir Deportistas y padres "
+                    +"\nS- ").toUpperCase().charAt(0);
+            switch(op){
+                case 'A':
+                    JOptionPane.showMessageDialog(null,listaDeportistas);
                     break;
-                case 1:
-                 mostrarUsuariosDeportistas();
+                case 'B':
+                    JOptionPane.showMessageDialog(null,listaPadres);
                     break;  
-                case 2:
-                 mostrarUsuariosPadresMadres();
-                    break; 
+                case 'C':
+                    JOptionPane.showMessageDialog(null,listaPadres);
+                    JOptionPane.showMessageDialog(null,listaDeportistas);
+                    break;    
                 default:
-                    JOptionPane.showMessageDialog(null,"Opción no válida, Intentelo nuevamente","Listado de usuarios",JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Opción no válida, Intentelo nuevamente","Mostrar usuarios",JOptionPane.WARNING_MESSAGE);
                     break;
             }
-        }while(!exit);
-        
+        }
     }
     //Fin Menú ListarUsuarios
-    
-    //Inicio método listar Usuarios 
-
-    public void mostrarUsuariosDeportistas() {
-
-        if (listaDeportistas.size() == 0) {
-            JOptionPane.showMessageDialog(null, "NADA PARA MOSTRAR");
-        } else {
-            String s = "";
-            for (int i = 0; i < listaDeportistas.size(); i++) {  
-                if(set.Status==true){
-                    a="Activo/a";
-                    return a;
-                }else{
-                    i="Inactivo/a";
-                    return i;
-                }
-                JOptionPane.showMessageDialog( "------Deportista------"+"\n" +
-                    +"Nombre: "+ s +listaDeportistas.get(i).getNombre()+"\n"
-                    +"Apellidos: "+ s +listaDeportistas.get(i).getApellido()+"\n"
-                    +"Teléfono:"+ s +listaDeportistas.get(i).getTelefono()+"\n"
-                    +"Cédula: "+ s +listaDeportistas.get(i).getCedula()+"\n"
-                    +"Mail: "+ s +listaDeportistas.get(i).getMail()+"\n"
-                    +"Status:"+s+listaDeportistas.get(i).getStatus()+"\n");       
-            }             
-        }   
-        JOptionPane.showMessageDialog(null, s);
-    }
-    public void mostrarUsuariosPadresMadres(){
-        if (listaPadres.size()==0) {
-            JOptionPane.showMessageDialog(null, "NADA PARA MOSTRAR");
-        } else {
-            String s = "";
-            for (int i = 0; i < listaPadres.size(); i++) {
-                if(set.Status==true){
-                    a="Activo/a";
-                    return a;
-                }else{
-                    i="Inactivo/a";
-                    return i;  
-                }
-                JOptionPane.showMessageDialog( "------Padres/Madres------"+"\n" +
-                    +"Nombre" + s+ listaPadres.get(i).getNombre() + " Padre de: "+ listaPadres.get(i).getNombre()+"\n"
-                    +"Apellidos: "+ s +listaPadres.get(i).getApellido()+"\n"
-                    +"Teléfono:"+ s +listaPadres.get(i).getTelefono()+"\n"
-                    +"Cédula: "+ s +listaPadres.get(i).getCedula()+"\n"
-                    +"Mail: "+ s +listaPadres.get(i).getMail()+"\n"
-                    +"Nombre niño"+s +listaPadres.get(i).getnombreNino()+"\n"
-                    +"Status:"+s+listaPadres.get(i).getStatus()+"\n");            
-            }   
-            JOptionPane.showMessageDialog(null, s);
-        }  
-    }
-    //fin Listar Usuarios
-    
-    
     public void buscarUserJF(String vecDatos[],String cedula){//este metodo solo sirve para el JF_editarUsuario
         
         
@@ -141,8 +87,7 @@ public class cls_funcionesM2 {
                 vecDatos[3]=listaPadres.get(i).getMail();
                 vecDatos[4]=listaPadres.get(i).getTelefono();
                 vecDatos[5]="2";
-                vecDatos[6]=listaPadres.get(i).getNomNino();
-                
+                vecDatos[6]=listaPadres.get(i).getNomNino();      
             }
         }
         for (int i = 0; i < listaDeportistas.size(); i++) {

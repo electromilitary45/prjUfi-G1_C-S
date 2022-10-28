@@ -133,7 +133,7 @@ public class JF_menuUsuarios_m2 extends javax.swing.JFrame {
     private void ico_listaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_listaMouseClicked
         // TODO add your handling code here:
         cls_funcionesM2 FM = new cls_funcionesM2();
-        FM.mostrarUsuarios();
+        FM.menuListarUsuarios();
     }//GEN-LAST:event_ico_listaMouseClicked
 
     private void ico_editarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_editarUsuarioMouseClicked
