@@ -153,9 +153,9 @@ public class cls_funcionesM2 {
     
     //---------------------METODOS M2P2----------------------
     
-    public void mostrarDeportes(){
+    public String mostrarDeportes(String s){
         if(listaDeportes.size()!=0){
-            String s="";
+            
             
             for (int i = 0; i < listaDeportes.size(); i++) {
                 String a="";
@@ -166,8 +166,9 @@ public class cls_funcionesM2 {
                 }
                 s=s+listaDeportes.get(i).getNombre()+"--"+listaDeportes.get(i).getCaracteristicas()+a+"\n";
             }
-            JOptionPane.showMessageDialog(null, "------LISTADO DE DEPORTES-----"+"\n"+s);
+            return s;
         }
-    
+        s="No hay datos";
+        return s;
     }
 }//fin cls_funcionesM2()
