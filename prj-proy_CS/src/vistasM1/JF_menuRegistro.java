@@ -6,6 +6,7 @@ package vistasM1;
 
 import javax.swing.JOptionPane;
 import prj.proy_cs.JF_menu;
+import prj.proy_cs.cls_funcionesUsuario;
 
 /**
  *
@@ -148,7 +149,7 @@ public class JF_menuRegistro extends javax.swing.JFrame {
 
     private void ico_listaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_listaMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "APARTADO NO DISPONIBLE || FALTA CREAR");
+        new cls_funcionesUsuario().mostrarUsers();
         
     }//GEN-LAST:event_ico_listaMouseClicked
 

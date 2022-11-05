@@ -193,4 +193,29 @@ public class cls_funcionesUsuario {
             JOptionPane.showMessageDialog(null, "Usuario no encontrado");
         }
     }
+    
+    public void mostrarUsers(){
+        if(listaClientes.size()!=0 || listaFacilitadores.size()!=0 || listaFamiliares.size()!=0){
+            String s="";
+            for (int i = 0; i < listaClientes.size(); i++) {
+                String a="Cliente";
+                s=s+listaClientes.get(i).getNombre()+"--"+listaClientes.get(i).getApellido()+"--"+listaClientes.get(i).getUsuario()+"--"+listaClientes.get(i).getContrasena()+"--"+a+"\n";
+            }
+            
+            for (int i = 0; i < listaFacilitadores.size(); i++) {
+                String a="Facilitador";
+                s=s+listaFacilitadores.get(i).getNombre()+"--"+listaFacilitadores.get(i).getApellido()+"--"+listaFacilitadores.get(i).getUsuario()+"--"+listaFacilitadores.get(i).getContrasena()+"--"+a+"\n";
+            }
+            
+            for (int i = 0; i < listaFamiliares.size(); i++) {
+                String a="Familitar";
+                s=s+listaFamiliares.get(i).getNombre()+"--"+listaFamiliares.get(i).getApellido()+"--"+listaFamiliares.get(i).getUsuario()+"--"+listaFamiliares.get(i).getContrasena()+"--"+a+"\n";
+            }
+            JOptionPane.showMessageDialog(null, "LISTA DE USUARIOS\n"+s);
+        }else{
+            JOptionPane.showMessageDialog(null, "NO HAY USUARIOS");
+        }
+        
+    
+    }//fin mostrarUsuarios(){}
 }//fin clasFunciones
