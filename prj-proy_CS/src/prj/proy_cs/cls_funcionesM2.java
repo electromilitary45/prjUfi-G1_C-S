@@ -20,7 +20,7 @@ public class cls_funcionesM2 {
     protected static ArrayList<cls_deporte> listaDeportes = new ArrayList<cls_deporte>();
     protected static ArrayList<cls_rutina> listaRutinas = new ArrayList<cls_rutina>();
 
-    //----------------------METODOS-----------------------------
+    //----------------------METODOS M2P1-----------------------------
     public void agregarUsuarios(String nombre, String apellido, String cedula, String mail, String numtel, int tipo, String nombreNino) {
 
         //-------INSTANCIAS------------
@@ -136,6 +136,7 @@ public class cls_funcionesM2 {
     }
 
     public void editarUsuario(String cedulaVieja, String cedulaNueva, String nombre, String apellido, String mail, String numtel, int tipo, String nombreNino) {
+        
     }//fin editarUSuario
 
     public void llenarcmbBxninos(String vecNombre[]) {
@@ -147,5 +148,26 @@ public class cls_funcionesM2 {
     }//fin llenarcbxninos
 
     public void desactivarUsuario(String cedula) {
+        
     }//fin cedula
+    
+    //---------------------METODOS M2P2----------------------
+    
+    public void mostrarDeportes(){
+        if(listaDeportes.size()!=0){
+            String s="";
+            
+            for (int i = 0; i < listaDeportes.size(); i++) {
+                String a="";
+                if(listaDeportes.get(i).getStatus()==true){
+                    a="Activo";
+                }else{
+                    a="Inactivo";
+                }
+                s=s+listaDeportes.get(i).getNombre()+"--"+listaDeportes.get(i).getCaracteristicas()+a+"\n";
+            }
+            JOptionPane.showMessageDialog(null, "------LISTADO DE DEPORTES-----"+"\n"+s);
+        }
+    
+    }
 }//fin cls_funcionesM2()
