@@ -116,6 +116,11 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
                 btn_crearMouseClicked(evt);
             }
         });
+        btn_crear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_crearActionPerformed(evt);
+            }
+        });
         jPanel1.add(btn_crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 100, -1));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
@@ -189,6 +194,11 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
         cbx_ninos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCION UN NIÑO" }));
+        cbx_ninos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbx_ninosActionPerformed(evt);
+            }
+        });
         jPanel1.add(cbx_ninos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 250, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 430));
@@ -290,6 +300,14 @@ public class JF_registroUsuario_m2 extends javax.swing.JFrame {
             cbx_ninos.setEnabled(true);
         }
     }//GEN-LAST:event_cbx_tipoUsuarioItemStateChanged
+
+    private void btn_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_crearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_crearActionPerformed
+
+    private void cbx_ninosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_ninosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbx_ninosActionPerformed
 
     /**
      * @param args the command line arguments

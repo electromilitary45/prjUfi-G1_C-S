@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package prj.proy_cs;
 
 //-----------------IMPORTS-----------------
@@ -160,7 +156,7 @@ public class cls_funcionesM2 {
             for (int i = 0; i < listaDeportes.size(); i++) {
                 String a="";
                 if(listaDeportes.get(i).getStatus()==true){
-                    a="Activo";
+                    a="Activo"; 
                 }else{
                     a="Inactivo";
                 }

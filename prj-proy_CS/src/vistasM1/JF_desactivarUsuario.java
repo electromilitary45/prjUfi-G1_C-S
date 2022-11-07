@@ -1,17 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package vistasM1;
 
 import extensiones.TextPrompt;
 import javax.swing.JOptionPane;
 import prj.proy_cs.cls_funcionesUsuario;
 
-/**
- *
- * @author usuario
- */
 public class JF_desactivarUsuario extends javax.swing.JFrame {
 
     /**

@@ -1,17 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package vistasM1;
 
 import extensiones.TextPrompt;
 import javax.swing.JOptionPane;
 import prj.proy_cs.cls_funcionesUsuario;
 
-/**
- *
- * @author Derek
- */
+
 public class JF_registroUsuario extends javax.swing.JFrame {
     //--INSTANCIAS--
 
@@ -98,6 +92,11 @@ public class JF_registroUsuario extends javax.swing.JFrame {
         btn_crear.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_crearMouseClicked(evt);
+            }
+        });
+        btn_crear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_crearActionPerformed(evt);
             }
         });
         jPanel1.add(btn_crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 100, -1));
@@ -202,6 +201,10 @@ public class JF_registroUsuario extends javax.swing.JFrame {
         JF_menuRegistro JFM = new JF_menuRegistro();
         JFM.setVisible(true);
     }//GEN-LAST:event_btn_tipoUsuarioMouseClicked
+
+    private void btn_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_crearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_crearActionPerformed
 
     /**
      * @param args the command line arguments
