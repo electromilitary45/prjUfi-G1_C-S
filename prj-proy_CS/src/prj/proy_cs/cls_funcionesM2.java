@@ -149,6 +149,15 @@ public class cls_funcionesM2 {
     
     //---------------------METODOS M2P2----------------------
     
+    public void crearDeportes(String nombre,String caracteristicas,Boolean status){ 
+      //Intancia
+      cls_deporte Dpt= new cls_deporte();
+      Dpt.setNombre(nombre);
+      Dpt.setCaracteristicas(caracteristicas);
+      Dpt.setStatus(true);
+      listaDeportes.add(Dpt);
+    }
+    
     public String mostrarDeportes(String s){
         if(listaDeportes.size()!=0){
             

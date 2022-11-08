@@ -52,6 +52,11 @@ public class JF_menuCatalogo extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ico_catDeportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_deportes128.png"))); // NOI18N
+        ico_catDeportes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_catDeportesMouseClicked(evt);
+            }
+        });
         jPanel1.add(ico_catDeportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, -1, -1));
 
         jbl_catDeportes.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -81,12 +86,12 @@ public class JF_menuCatalogo extends javax.swing.JFrame {
         jPanel1.add(jbl_Catusuarios1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
 
         ico_catRutinas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_rutinas128.png"))); // NOI18N
-        jPanel1.add(ico_catRutinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
+        jPanel1.add(ico_catRutinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, -1, -1));
 
         jbl_rutinas.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jbl_rutinas.setForeground(new java.awt.Color(255, 255, 255));
         jbl_rutinas.setText("RUTINAS");
-        jPanel1.add(jbl_rutinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, -1, -1));
+        jPanel1.add(jbl_rutinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 420, -1, -1));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 51));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 51));
@@ -115,6 +120,13 @@ public class JF_menuCatalogo extends javax.swing.JFrame {
         JF_menuUsuarios_m2 JF =new JF_menuUsuarios_m2();
         JF.setVisible(true);
     }//GEN-LAST:event_ico_catUsuariosMouseClicked
+
+    private void ico_catDeportesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_catDeportesMouseClicked
+        dispose();
+        JF_menuDeportes JF= new JF_menuDeportes();
+        JF.setVisible(true);
+        setLocationRelativeTo(null);
+    }//GEN-LAST:event_ico_catDeportesMouseClicked
 
     /**
      * @param args the command line arguments
