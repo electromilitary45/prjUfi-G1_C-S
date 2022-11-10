@@ -183,6 +183,7 @@ public class cls_funcionesM2 {
         for (int x = 0; x < listaDeportes.size(); x++) {
             if (listaDeportes.get(x).getNombre().equals(nombre)) {
                 encontrado = true;
+                listaDeportes.get(x).setStatus(false);
                 JOptionPane.showMessageDialog(null, "DEPORTE DESACTIVADO CON EXITO");
             }
             if (listaDeportes.get(x).getNombre().equals(nombre) == false) {
