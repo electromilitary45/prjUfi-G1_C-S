@@ -109,7 +109,7 @@ public class JF_menuCatalogo extends javax.swing.JFrame {
 
     private void ico_retrocerderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_retrocerderMouseClicked
         // TODO add your handling code here:
-        dispose();
+        //COMENTADO PARA PROBRAR   -->   //dispose();
         JF_menu JFM = new JF_menu();
         JFM.setVisible(true);
     }//GEN-LAST:event_ico_retrocerderMouseClicked

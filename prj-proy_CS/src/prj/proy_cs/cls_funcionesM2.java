@@ -132,7 +132,7 @@ public class cls_funcionesM2 {
     }
 
     public void editarUsuario(String cedulaVieja, String cedulaNueva, String nombre, String apellido, String mail, String numtel, int tipo, String nombreNino) {
-        
+
     }//fin editarUSuario
 
     public void llenarcmbBxninos(String vecNombre[]) {
@@ -144,36 +144,55 @@ public class cls_funcionesM2 {
     }//fin llenarcbxninos
 
     public void desactivarUsuario(String cedula) {
-        
+
     }//fin cedula
-    
+
     //---------------------METODOS M2P2----------------------
-    
-    public void crearDeportes(String nombre,String caracteristicas,Boolean status){ 
-      //Intancia
-      cls_deporte Dpt= new cls_deporte();
-      Dpt.setNombre(nombre);
-      Dpt.setCaracteristicas(caracteristicas);
-      Dpt.setStatus(true);
-      listaDeportes.add(Dpt);
+    public void crearDeportes(String nombre, String caracteristicas, Boolean status) {
+        //Intancia
+        cls_deporte Dpt = new cls_deporte();
+        Dpt.setNombre(nombre);
+        Dpt.setCaracteristicas(caracteristicas);
+        Dpt.setStatus(true);
+        listaDeportes.add(Dpt);
     }
-    
-    public String mostrarDeportes(String s){
-        if(listaDeportes.size()!=0){
-            
-            
+
+    public String mostrarDeportes(String s) {
+        if (listaDeportes.size() != 0) {
+
             for (int i = 0; i < listaDeportes.size(); i++) {
-                String a="";
-                if(listaDeportes.get(i).getStatus()==true){
-                    a="Activo"; 
-                }else{
-                    a="Inactivo";
+                String a = "";
+                if (listaDeportes.get(i).getStatus() == true) {
+                    a = "Activo";
+                } else {
+                    a = "Inactivo";
                 }
-                s=s+listaDeportes.get(i).getNombre()+"--"+listaDeportes.get(i).getCaracteristicas()+a+"\n";
+                s = s + listaDeportes.get(i).getNombre() + "--" + listaDeportes.get(i).getCaracteristicas() + a + "\n";
             }
             return s;
         }
-        s="No hay datos";
+        s = "No hay datos";
         return s;
     }
+
+    public void desactivarDeporte(String nombre) {
+
+        boolean desactivado = false; // solo se activa si el deporte fue encontrado y desactivado || se utiliza para mensaje
+        boolean encontrado = false;
+        //---LISTA DEPORTES--
+        for (int x = 0; x < listaDeportes.size(); x++) {
+            if (listaDeportes.get(x).getNombre().equals(nombre)) {
+                encontrado = true;
+                JOptionPane.showMessageDialog(null, "DEPORTE DESACTIVADO CON EXITO");
+            }
+            if (listaDeportes.get(x).getNombre().equals(nombre) == false) {
+                JOptionPane.showMessageDialog(null, "DEPORTE NO REGISTRADO");
+                desactivado = false;
+                encontrado = false;
+
+            }
+
+        }
+    }
 }//fin cls_funcionesM2()
+

@@ -40,16 +40,19 @@ public class JF_crearDeporte extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Nombre:");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Características:");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Estado:");
+
+        jtf_nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtf_nombreActionPerformed(evt);
+            }
+        });
 
         jtf_caracteristicas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,6 +231,10 @@ public class JF_crearDeporte extends javax.swing.JFrame {
         JTD.setVisible(true);
         setLocationRelativeTo(null);
     }//GEN-LAST:event_btn_cancelarMouseClicked
+
+    private void jtf_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtf_nombreActionPerformed
 
     /**
      * @param args the command line arguments
