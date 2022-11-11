@@ -169,7 +169,27 @@ public class cls_funcionesM2 {
         }//fin llenarcbxninos
 
         public void desactivarUsuario(String cedula) {
+                for (int i = 0; i < listaPadres.size(); i++) {
+                        if (listaPadres.get(i).getCedula().equals(cedula)) {
+                                if (listaPadres.get(i).getStatus() != false) {
+                                        listaPadres.get(i).setStatus(false);
+                                        JOptionPane.showMessageDialog(null, "Usuario desactivado correctamente");
+                                } else {
+                                        JOptionPane.showMessageDialog(null, "Usuario Inactivo antiguamente");
+                                }
 
+                        }
+                }
+                for (int i = 0; i < listaDeportistas.size(); i++) {
+                        if (listaDeportistas.get(i).getCedula().equals(cedula)) {
+                                if (listaDeportistas.get(i).getStatus() != false) {
+                                        listaDeportistas.get(i).setStatus(false);
+                                        JOptionPane.showMessageDialog(null, "Usuario desactivado correctamente");
+                                } else {
+                                        JOptionPane.showMessageDialog(null, "Usuario Inactivvo Antiguamente");
+                                }
+                        }
+                }
         }//fin cedula
 
         //---------------------METODOS M2P2----------------------
