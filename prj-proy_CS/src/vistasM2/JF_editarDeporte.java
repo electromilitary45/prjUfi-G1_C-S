@@ -157,7 +157,7 @@ public class JF_editarDeporte extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        //editarDeporte(jTextField1.getText(),jTextArea1.getText());
+       // editarDeporte(jTextField1.getText(),jTextArea1.getText());
             
         
     }//GEN-LAST:event_jButton2ActionPerformed
