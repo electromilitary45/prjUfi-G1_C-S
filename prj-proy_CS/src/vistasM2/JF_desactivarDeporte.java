@@ -162,9 +162,9 @@ public class JF_desactivarDeporte extends javax.swing.JFrame {
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         if (!jTextField1.getText().isBlank() && !jTextField1.getText().isEmpty()) {
-            String usuario = jTextField1.getText();
+            String deporte = jTextField1.getText();
             cls_funcionesM2 clsFU = new cls_funcionesM2();
-            clsFU.desactivarDeporte(usuario);
+            clsFU.desactivarDeporte(deporte);
             dispose();
             JF_menuDeportes JFMR = new JF_menuDeportes();
             JFMR.setVisible(true);
