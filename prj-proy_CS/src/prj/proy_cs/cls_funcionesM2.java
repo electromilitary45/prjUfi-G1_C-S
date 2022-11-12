@@ -194,5 +194,25 @@ public class cls_funcionesM2 {
 
         }
     }
+    
+    public boolean buscarDeporte(String nombre){
+        boolean encontrado = false;
+        for (int x = 0; x < listaDeportes.size(); x++) {
+            if (listaDeportes.get(x).getNombre().equals(nombre)) {
+                encontrado = true;
+                JOptionPane.showMessageDialog(null, "DEPORTE ENCONTRADO");
+                return encontrado;
+            }
+        }
+        return encontrado;
+    }
+    
+    public void editarDeporte(String nombre, String caracteristicas){
+        for (int x = 0; x < listaDeportes.size(); x++) {
+            if (listaDeportes.get(x).getNombre().equals(nombre)) {
+                listaDeportes.get(x).setCaracteristicas(caracteristicas);
+            }
+        }
+    }
 }//fin cls_funcionesM2()
 

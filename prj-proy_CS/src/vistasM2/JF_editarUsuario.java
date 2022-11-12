@@ -395,7 +395,8 @@ public class JF_editarUsuario extends javax.swing.JFrame {
                         FM.editarUsuario(cedulaVieja, cedulaNueva, nombre, apellido, mail, numtel, tipo, nombreNino);
                         JOptionPane.showMessageDialog(null, "PADRE EDITADO CORRECTAMENTE");
                         dispose();
-                        new JF_menuUsuarios_m2().setVisible(true);
+           
+             new JF_menuUsuarios_m2().setVisible(true);
                     }
                 }
 
