@@ -202,7 +202,8 @@ public class cls_funcionesM2 {
                 listaDeportes.add(Dpt);
         }
 
-        public String mostrarDeportes(String s) {
+        public String mostrarDeportes() {
+                String s = "";
                 if (listaDeportes.size() != 0) {
 
                         for (int i = 0; i < listaDeportes.size(); i++) {
@@ -214,9 +215,11 @@ public class cls_funcionesM2 {
                                 }
                                 s = s + listaDeportes.get(i).getNombre() + "--" + listaDeportes.get(i).getCaracteristicas() + a + "\n";
                         }
-                        return s;
+
+                } else {
+                        s = "No hay datos";
                 }
-                s = "No hay datos";
+
                 return s;
         }
 
@@ -240,47 +243,46 @@ public class cls_funcionesM2 {
 
                 }
         }
-    
-    
-    public boolean buscarDeporte(String nombre){
-        boolean encontrado = false;
-        for (int x = 0; x < listaDeportes.size(); x++) {
-            if (listaDeportes.get(x).getNombre().equals(nombre)) {
-                encontrado = true;
-                JOptionPane.showMessageDialog(null, "DEPORTE ENCONTRADO");
-                return encontrado;
-            }
-        }
-        return encontrado;
-    }
-    
-    public void editarDeporte(String nombre, String caracteristicas){
-        for (int x = 0; x < listaDeportes.size(); x++) {
-            if (listaDeportes.get(x).getNombre().equals(nombre)) {
-                listaDeportes.get(x).setCaracteristicas(caracteristicas);
-            }
-        }
-    }
-    
-    //----------------------METODOS M2P3----------------------
-     public String mostrarRutina() {
-               String s = "";
-                if (listaRutinas.size() != 0) {
-                      
-                        String st="";
-                        for (int i = 0; i < listaRutinas.size(); i++) {
-                                if(listaRutinas.get(i).isStatus()==true){
-                                        st="Activo";
-                                }else{
-                                        st="Inactivo";
-                                }
-                                s = s + "\t"+listaRutinas.get(i).getNombreRutina() + "\t" + listaRutinas.get(i).getDeporteAsignado() + "\t" + listaRutinas.get(i).getDescripcion() + "\t" + listaRutinas.get(i).getDuracion() +"\t "+st+"\n";
+
+        public boolean buscarDeporte(String nombre) {
+                boolean encontrado = false;
+                for (int x = 0; x < listaDeportes.size(); x++) {
+                        if (listaDeportes.get(x).getNombre().equals(nombre)) {
+                                encontrado = true;
+                                JOptionPane.showMessageDialog(null, "DEPORTE ENCONTRADO");
+                                return encontrado;
                         }
-                       
-                } else {
-                        s="No existen datos";
                 }
-                return s ;
+                return encontrado;
+        }
+
+        public void editarDeporte(String nombre, String caracteristicas) {
+                for (int x = 0; x < listaDeportes.size(); x++) {
+                        if (listaDeportes.get(x).getNombre().equals(nombre)) {
+                                listaDeportes.get(x).setCaracteristicas(caracteristicas);
+                        }
+                }
+        }
+
+        //----------------------METODOS M2P3----------------------
+        public String mostrarRutina() {
+                String s = "";
+                if (listaRutinas.size() != 0) {
+
+                        String st = "";
+                        for (int i = 0; i < listaRutinas.size(); i++) {
+                                if (listaRutinas.get(i).isStatus() == true) {
+                                        st = "Activo";
+                                } else {
+                                        st = "Inactivo";
+                                }
+                                s = s + "\t" + listaRutinas.get(i).getNombreRutina() + "\t" + listaRutinas.get(i).getDeporteAsignado() + "\t" + listaRutinas.get(i).getDescripcion() + "\t" + listaRutinas.get(i).getDuracion() + "\t " + st + "\n";
+                        }
+
+                } else {
+                        s = "No existen datos";
+                }
+                return s;
         }
 }//fin cls_funcionesM2()
 
