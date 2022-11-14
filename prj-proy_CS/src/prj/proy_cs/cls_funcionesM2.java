@@ -261,5 +261,26 @@ public class cls_funcionesM2 {
             }
         }
     }
+    
+    //----------------------METODOS M2P3----------------------
+     public String mostrarRutina() {
+               String s = "";
+                if (listaRutinas.size() != 0) {
+                      
+                        String st="";
+                        for (int i = 0; i < listaRutinas.size(); i++) {
+                                if(listaRutinas.get(i).isStatus()==true){
+                                        st="Activo";
+                                }else{
+                                        st="Inactivo";
+                                }
+                                s = s + "\t"+listaRutinas.get(i).getNombreRutina() + "\t" + listaRutinas.get(i).getDeporteAsignado() + "\t" + listaRutinas.get(i).getDescripcion() + "\t" + listaRutinas.get(i).getDuracion() +"\t "+st+"\n";
+                        }
+                       
+                } else {
+                        s="No existen datos";
+                }
+                return s ;
+        }
 }//fin cls_funcionesM2()
 
