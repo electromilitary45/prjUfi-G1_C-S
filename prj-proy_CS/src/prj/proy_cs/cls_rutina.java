@@ -2,53 +2,59 @@ package prj.proy_cs;
 
 public class cls_rutina {
     
+    private String nombreRutina;
     private String deporteAsignado;
     private String descripcion;
     private String duracion;
-    private Boolean status;
+    private boolean status;
     
     public cls_rutina(){
-        
-    }
-    
-    public cls_rutina(String deporteAsignado, String descripcion, String duracion, Boolean status) {
-        this.deporteAsignado = " ";
-        this.descripcion = " ";
-        this.duracion = " ";
-        this.status = true;
+        this.nombreRutina="";
+        this.deporteAsignado="";
+        this.descripcion="";
+        this.duracion="";
+        this.status=true;
     }
 
-    public String getDeporteAsignado() {
-        return deporteAsignado;
-    }
+        public String getNombreRutina() {
+                return nombreRutina;
+        }
 
-    public void setDeporteAsignado(String deporteAsignado) {
-        this.deporteAsignado = deporteAsignado;
-    }
+        public void setNombreRutina(String nombreRutina) {
+                this.nombreRutina = nombreRutina;
+        }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
+        public String getDeporteAsignado() {
+                return deporteAsignado;
+        }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+        public void setDeporteAsignado(String deporteAsignado) {
+                this.deporteAsignado = deporteAsignado;
+        }
 
-    public String getDuracion() {
-        return duracion;
-    }
+        public String getDescripcion() {
+                return descripcion;
+        }
 
-    public void setDuracion(String duracion) {
-        this.duracion = duracion;
-    }
+        public void setDescripcion(String descripcion) {
+                this.descripcion = descripcion;
+        }
 
-    public Boolean getStatus() {
-        return status;
-    }
+        public String getDuracion() {
+                return duracion;
+        }
 
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
+        public void setDuracion(String duracion) {
+                this.duracion = duracion;
+        }
+
+        public boolean isStatus() {
+                return status;
+        }
+
+        public void setStatus(boolean status) {
+                this.status = status;
+        }
     
     
 }
