@@ -135,7 +135,6 @@ public class JF_menu extends javax.swing.JFrame {
         panelP.add(lbl_cajas, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 0));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("SALIR");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -169,11 +168,6 @@ public class JF_menu extends javax.swing.JFrame {
         
     }//GEN-LAST:event_ico_registroFocusGained
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_jButton1MouseClicked
-
     private void ico_registroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_registroMouseEntered
         // TODO add your handling code here:
         ico_registro.setBackground(Color.YELLOW);
@@ -187,6 +181,10 @@ public class JF_menu extends javax.swing.JFrame {
         JF.setVisible(true);
         
     }//GEN-LAST:event_ico_catalogoMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
