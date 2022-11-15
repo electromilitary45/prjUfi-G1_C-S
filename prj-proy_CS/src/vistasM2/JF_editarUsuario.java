@@ -324,7 +324,7 @@ public class JF_editarUsuario extends javax.swing.JFrame {
     private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
         // TODO add your handling code here:\]
         String vecDatos[] = new String[8];
-
+        
         try {
             String cedula = jtf_cedula1.getText();
 

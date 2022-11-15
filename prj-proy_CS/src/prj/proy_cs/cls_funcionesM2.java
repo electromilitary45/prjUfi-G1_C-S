@@ -256,7 +256,7 @@ public class cls_funcionesM2 {
                 return encontrado;
         }
 
-        public void editarDeporte(String nombre, String caracteristicas) {
+        public void editarDeporte(String nombre, String caracteristicas,Boolean Status) {
                 for (int x = 0; x < listaDeportes.size(); x++) {
                         if (listaDeportes.get(x).getNombre().equals(nombre)) {
                                 listaDeportes.get(x).setCaracteristicas(caracteristicas);
@@ -286,11 +286,8 @@ public class cls_funcionesM2 {
                 return s;
         }
         
-    //---------------------METODOS M2P3----------------------
-        
-        
-        
-        
+       
+      
 }//fin cls_funcionesM2()
 
 
