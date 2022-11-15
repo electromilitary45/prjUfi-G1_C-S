@@ -260,6 +260,7 @@ public class cls_funcionesM2 {
                 for (int x = 0; x < listaDeportes.size(); x++) {
                         if (listaDeportes.get(x).getNombre().equals(nombre)) {
                                 listaDeportes.get(x).setCaracteristicas(caracteristicas);
+                                listaDeportes.get(x).setStatus(Boolean.TRUE);
                         }
                 }
         }
@@ -286,6 +287,8 @@ public class cls_funcionesM2 {
         }
         
     //---------------------METODOS M2P3----------------------
+        
+        
         
         
 }//fin cls_funcionesM2()
