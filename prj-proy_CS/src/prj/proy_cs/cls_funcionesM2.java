@@ -284,5 +284,11 @@ public class cls_funcionesM2 {
                 }
                 return s;
         }
+        
+    //---------------------METODOS M2P3----------------------
+        
+        
 }//fin cls_funcionesM2()
+
+
 
