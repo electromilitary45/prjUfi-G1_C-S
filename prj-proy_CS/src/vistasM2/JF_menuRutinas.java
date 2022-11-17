@@ -130,7 +130,8 @@ public class JF_menuRutinas extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_mostrarRutinasMouseClicked
 
     private void btn_editarRutinaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editarRutinaMouseClicked
-            // TODO add your handling code here:
+            // Editar Rutina
+            
             dispose();
 
     }//GEN-LAST:event_btn_editarRutinaMouseClicked
