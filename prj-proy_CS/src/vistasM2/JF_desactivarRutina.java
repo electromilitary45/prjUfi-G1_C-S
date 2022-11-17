@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package vistasM2;
 
 /**
@@ -18,6 +15,11 @@ public class JF_desactivarRutina extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         setTitle("-Desactivación Rutinas-");
+    }
+
+    //Método limpiar
+    public void limpiar() {
+        jTextField1.setText("");
     }
 
     /**
