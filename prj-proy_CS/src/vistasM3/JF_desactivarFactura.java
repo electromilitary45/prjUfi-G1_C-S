@@ -1,6 +1,7 @@
 package vistasM3;
 
-import vistasM2.JF_menuDeportes;
+import javax.swing.JOptionPane;
+import prj.proy_cs.cls_funcionesM3;
 
 /**
  *
@@ -73,8 +74,6 @@ public class JF_desactivarFactura extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         jLabel1.setText("DIGITE NUMERO DE LA FACTURA");
 
-        jToggleButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton1.setText("DESACTIVAR");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,8 +81,6 @@ public class JF_desactivarFactura extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton2.setBackground(new java.awt.Color(0, 0, 0));
-        jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton2.setText("SALIR");
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,7 +132,7 @@ public class JF_desactivarFactura extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addGap(47, 47, 47))
@@ -155,13 +152,24 @@ public class JF_desactivarFactura extends javax.swing.JFrame {
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         // TODO add your handling code here:
         dispose();
-        //JF_menuFacturas JTD = new JF_menuFacturas();
-        //JTD.setVisible(true);
+        JF_menuFacturacion JTD = new JF_menuFacturacion();
+        JTD.setVisible(true);
         setLocationRelativeTo(null);
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
+        if (!jTextField1.getText().isBlank() && !jTextField1.getText().isEmpty()) {
+            String factura= jTextField1.getText();
+            cls_funcionesM3 clsFU = new cls_funcionesM3();
+            clsFU.desactivarFactura(factura);
+            dispose();
+            JF_menuFacturacion JFMR = new JF_menuFacturacion();
+            JFMR.setVisible(true);
+            limpiar();
+        } else {
+            JOptionPane.showMessageDialog(null, "DEBE RELLENAR LOS ESPACIO REQUERIDOS");
+        }
 
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 

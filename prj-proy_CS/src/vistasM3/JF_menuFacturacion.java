@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vistasM3;
+
 import prj.proy_cs.JF_menu;
 
 /**
@@ -108,9 +109,8 @@ public class JF_menuFacturacion extends javax.swing.JFrame {
 
     private void btn_desactivarFacturaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_desactivarFacturaMouseClicked
         // TODO add your handling code here:
-        
         dispose();
-
+        new JF_desactivarFactura().setVisible(true);
     }//GEN-LAST:event_btn_desactivarFacturaMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

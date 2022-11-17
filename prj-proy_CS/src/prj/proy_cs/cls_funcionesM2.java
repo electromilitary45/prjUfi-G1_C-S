@@ -213,7 +213,7 @@ public class cls_funcionesM2 {
                 } else {
                     a = "Inactivo";
                 }
-                s = s + listaDeportes.get(i).getNombre() + "--" + listaDeportes.get(i).getCaracteristicas() + a + "\n";
+                s = s + listaDeportes.get(i).getNombre() + "--" + listaDeportes.get(i).getCaracteristicas() + "--" + a + "--" +"\n";
             }
 
         } else {
@@ -314,7 +314,7 @@ public class cls_funcionesM2 {
                 listaRutinas.get(x).setStatus(false);
                 JOptionPane.showMessageDialog(null, "RUTINA DESACTIVADA CON EXITO");
             }
-            if (listaDeportes.get(x).getNombre().equals(nombre) == false) {
+            if (listaRutinas.get(x).getNombreRutina().equals(nombre) == false) {
                 JOptionPane.showMessageDialog(null, "RUTINA NO REGISTRADA");
                 desactivado = false;
                 encontrado = false;
