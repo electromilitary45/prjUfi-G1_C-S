@@ -208,7 +208,7 @@ public class JF_crearDeporte extends javax.swing.JFrame {
                 }
                //Instancia 
                DPT.crearDeportes(nombre, caracteristicas, rootPaneCheckingEnabled);
-               JOptionPane.showMessageDialog(null,"¡Usuario creado correctamente!"); 
+               JOptionPane.showMessageDialog(null,"¡Deporte registrado correctamente!"); 
                limpiar(); 
             }else{
                 JOptionPane.showMessageDialog(null,"Debe rellenar los datos"); 

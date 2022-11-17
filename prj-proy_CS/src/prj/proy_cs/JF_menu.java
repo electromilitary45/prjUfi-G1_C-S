@@ -9,6 +9,7 @@ import java.awt.Color;
 
 import vistasM1.JF_menuRegistro;
 import vistasM2.JF_menuCatalogo;
+import vistasM3.JF_menuFacturacion;
 
 /**
  *
@@ -114,6 +115,11 @@ public class JF_menu extends javax.swing.JFrame {
         panelP.add(lbl_catalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, -1, -1));
 
         ico_facturacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_facturacion.png"))); // NOI18N
+        ico_facturacion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ico_facturacionMouseClicked(evt);
+            }
+        });
         panelP.add(ico_facturacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
 
         lbl_facturacion.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -185,6 +191,12 @@ public class JF_menu extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void ico_facturacionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_facturacionMouseClicked
+        // TODO add your handling code here:\
+        dispose();
+        new JF_menuFacturacion().setVisible(true);
+    }//GEN-LAST:event_ico_facturacionMouseClicked
 
     /**
      * @param args the command line arguments
