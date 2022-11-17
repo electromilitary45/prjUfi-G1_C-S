@@ -120,6 +120,7 @@ public class JF_menuRutinas extends javax.swing.JFrame {
 
     private void btn_agregarRutinaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_agregarRutinaMouseClicked
         // TODO add your handling code here:
+        new JF_crearRutina().setVisible(true);
         dispose();
 
     }//GEN-LAST:event_btn_agregarRutinaMouseClicked
