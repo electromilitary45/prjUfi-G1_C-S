@@ -138,7 +138,7 @@ public class JF_menuRutinas extends javax.swing.JFrame {
         private void btn_desactivarRutinaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_desactivarRutinaMouseClicked
             // TODO add your handling code here:
             new JF_desactivarRutina().setVisible(true);
-            dispose();
+            dispose(); 
 
 
         }//GEN-LAST:event_btn_desactivarRutinaMouseClicked

@@ -342,5 +342,5 @@ public class cls_funcionesM2 {
         }
     }
 
-}//fin cls_funcionesM2()
+}//fin cls_funcionesM2()...
 

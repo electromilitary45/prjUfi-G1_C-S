@@ -117,6 +117,7 @@ public class JF_editarRutina extends javax.swing.JFrame {
             }
         });
 
+        cbx_deporteAsignado.setForeground(new java.awt.Color(153, 153, 153));
         cbx_deporteAsignado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbx_deporteAsignadoActionPerformed(evt);
@@ -247,6 +248,7 @@ public class JF_editarRutina extends javax.swing.JFrame {
                 
              }else{
                  JOptionPane.showMessageDialog(null, "¡Rutina no encontrada!");
+                 limpiar();
              }
         }catch (Exception e) {
                 dispose();
@@ -272,6 +274,7 @@ public class JF_editarRutina extends javax.swing.JFrame {
             }
         }
         cbx_deporteAsignado.setModel(new DefaultComboBoxModel<>(vec2));
+        
     }//Fin método llenar comboBox Deportes 
      
     private void cbx_deporteAsignadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_deporteAsignadoActionPerformed
