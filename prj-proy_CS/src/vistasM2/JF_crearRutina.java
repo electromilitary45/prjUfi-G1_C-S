@@ -96,6 +96,11 @@ public class JF_crearRutina extends javax.swing.JFrame {
         });
 
         cbx_deportes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbx_deportes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbx_deportesActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         jLabel2.setText("NOMBRE RUTINA");
@@ -229,6 +234,10 @@ public class JF_crearRutina extends javax.swing.JFrame {
         jTextField3.setText("");
 
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void cbx_deportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_deportesActionPerformed
+        
+    }//GEN-LAST:event_cbx_deportesActionPerformed
 
     /**
      * @param args the command line arguments

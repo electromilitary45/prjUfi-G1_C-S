@@ -321,13 +321,26 @@ public class cls_funcionesM2 {
             }
         }
     }//fin metodo de desactivar rutina
-    
-    
-    
-    
-    
-    
-    
+     public void editarRutinas(String nombreRutina,String deporteAsignado,String descripcion,String duracion,Boolean status){
+         for(int x=0;x<listaRutinas.size();x++){
+             if(listaRutinas.get(x).getNombreRutina().equals(nombreRutina)){
+                 listaRutinas.get(x).setDeporteAsignado(deporteAsignado);
+                 listaRutinas.get(x).setDescripcion(descripcion);
+                 listaRutinas.get(x).setDuracion(duracion);
+                 listaRutinas.get(x).setStatus(status);
+                 
+             }
+         } 
+    } // Fin método editarRuina
+    public void buscarRutinaJF(String vecDatos[], String nombreRutina){ //Método solo funciona para JF_editarRutina
+        for(int i=0; i<listaRutinas.size();i++){
+            if(listaRutinas.get(i).getNombreRutina().equals(nombreRutina)){
+                vecDatos[1]=listaRutinas.get(i).getDescripcion();
+                vecDatos[2]=listaRutinas.get(i).getDuracion();
+                vecDatos[3]=listaRutinas.get(i).getDeporteAsignado();
+            }
+        }
+    }
 
 }//fin cls_funcionesM2()
 
