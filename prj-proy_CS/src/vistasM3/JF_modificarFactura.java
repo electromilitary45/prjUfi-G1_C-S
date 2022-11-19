@@ -50,12 +50,14 @@ public class JF_modificarFactura extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        btn_buscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setForeground(new java.awt.Color(204, 204, 204));
+
+        txt_pago.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         jestado.setText("¡Marca la casilla para indicar que se encuentra activo!");
         jestado.addActionListener(new java.awt.event.ActionListener() {
@@ -72,58 +74,70 @@ public class JF_modificarFactura extends javax.swing.JFrame {
         });
 
         btn_guardar.setText("GUARDAR");
+        btn_guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_guardarActionPerformed(evt);
+            }
+        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_nombre.png"))); // NOI18N
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_dinero24.png"))); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 51, 51));
-        jLabel3.setText("EDITA TU FACTURA");
+        jLabel3.setText("¡EDITA TU FACTURA!");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_estimar.png"))); // NOI18N
+        btn_buscar.setBackground(new java.awt.Color(255, 255, 204));
+        btn_buscar.setForeground(new java.awt.Color(0, 51, 51));
+        btn_buscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ico_buscarEditarDeporte.png"))); // NOI18N
+        btn_buscar.setText("jButton1");
+        btn_buscar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_buscarMouseClicked(evt);
+            }
+        });
+        btn_buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(10, 10, 10)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
+                        .addComponent(btn_cancelar)
+                        .addGap(143, 143, 143)
+                        .addComponent(btn_guardar))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btn_cancelar)
-                                .addGap(143, 143, 143)
-                                .addComponent(btn_guardar))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jestado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cbx_niños, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txt_pago))))
-                        .addGap(0, 46, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4)))
-                .addContainerGap())
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jestado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbx_niños, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_pago))))
+                .addContainerGap(52, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(74, 74, 74)
+                .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(11, 11, 11)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(btn_buscar))
+                .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbx_niños, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -160,10 +174,31 @@ public class JF_modificarFactura extends javax.swing.JFrame {
 
     private void btn_cancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_cancelarMouseClicked
         dispose();
-        JF_menuFacturacion F= new JF_menuFacturacion();
+        JF_menuFacturacion F = new JF_menuFacturacion();
         F.setVisible(true);
         setLocationRelativeTo(null);
     }//GEN-LAST:event_btn_cancelarMouseClicked
+
+    private void btn_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_guardarActionPerformed
+        if ((String) cbx_niños.getSelectedItem() != null && !txt_pago.getText().isBlank() && !txt_pago.getText().isEmpty()) {
+            String nino = (String) cbx_niños.getSelectedItem();
+            String pago = txt_pago.getText();
+            modificarFactura();
+        } else {
+            JOptionPane.showMessageDialog(null, "DEBE RELLENAR LOS ESCPACIOS");
+        }
+    }//GEN-LAST:event_btn_guardarActionPerformed
+
+    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
+
+    }//GEN-LAST:event_btn_buscarActionPerformed
+
+    private void btn_buscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_buscarMouseClicked
+
+        String nino = (String) cbx_niños.getSelectedItem();
+        String pago = txt_pago.getText();
+        consultar();
+    }//GEN-LAST:event_btn_buscarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -196,33 +231,38 @@ public class JF_modificarFactura extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new JF_modificarFactura().setVisible(true);
-               
+
             }
         });
     }
     //Métodos JF_modificarFactura
-    
-    public void modificarFactura(String nombreDepor,String Pago,Boolean status){
-         try{
-             cls_factura f=new cls_factura();
-             DataInputStream entrada= new DataInputStream(new FileInputStream("FACTURAS.dat"));
-             DataOutputStream salida= new DataOutputStream(new FileOutputStream("TEMPORAL.dat"));
-             //STRING BUSCAR
-             try{
-                 while(true){
-                     f.setNomDeport(entrada.readUTF());
-                     f.setPago(entrada.readUTF());
-                     f.setStatus(entrada.readChar());
-                     if(jestado.isSelected()){
-                         f.setStatus('1'); //ACTIVO
-                     }else{
-                         f.setStatus('0'); //INACTIVO
-                     }
-                     salida.writeUTF(f.getNomDeport());
-                     salida.writeUTF(f.getPago());
-                     salida.writeChar(f.getStatus());     
+
+    public void modificarFactura() {
+        try {
+            cls_factura f = new cls_factura();
+            DataInputStream entrada = new DataInputStream(new FileInputStream("FACTURAS.dat"));
+            DataOutputStream salida = new DataOutputStream(new FileOutputStream("TEMPORAL.dat"));
+            //STRING BUSCAR
+            try {
+                while (true) {
+                    f.setNomDeport(entrada.readUTF());
+                    f.setFecha(entrada.readUTF());
+                    f.setPago(entrada.readUTF());
+                    f.setStatus(entrada.readChar());
+                    if (cbx_niños.getSelectedItem().equals(f.getNomDeport())) {       
+                        if (jestado.isSelected()){
+                           f.setStatus('1'); //ACTIVO
+                        } else {
+                             f.setStatus('2'); //INACTIVO
+                        }  
+                        f.setPago(txt_pago.getText());
+                    }
+                    salida.writeUTF(f.getNomDeport());
+                    salida.writeUTF(f.getFecha());
+                    salida.writeUTF(f.getPago());
+                    salida.writeChar(f.getStatus());
                 }
-            }catch (EOFException eofe) {
+            } catch (EOFException eofe) {
                 entrada.close();
                 salida.close();
                 mover();
@@ -231,7 +271,7 @@ public class JF_modificarFactura extends javax.swing.JFrame {
                 limpiar();
                 cbx_niños.requestFocus();
             }
-        }catch (FileNotFoundException fnfe) {
+        } catch (FileNotFoundException fnfe) {
             JOptionPane.showMessageDialog(null, "¡Archivo no encontrado, revise!",
                     "Archivo no encontrado", JOptionPane.ERROR_MESSAGE);
         } catch (IOException ioe) {
@@ -239,27 +279,29 @@ public class JF_modificarFactura extends javax.swing.JFrame {
                     "Error desconocido", JOptionPane.ERROR_MESSAGE);
         }
     } //Fin método modificar facturas 
-     
+
     public void limpiar() {
         cbx_niños.setSelectedItem("");
         txt_pago.setText("");
         jestado.setSelected(false);
     }// fin método limpiar
-     
+
     public void mover() {
         try {
-            cls_factura f=new cls_factura();
+            cls_factura f = new cls_factura();
             DataInputStream entrada = new DataInputStream(new FileInputStream(
                     "TEMPORAL.dat"));
             DataOutputStream salida = new DataOutputStream(new FileOutputStream(
                     "FACTURAS.dat"));
             try {
                 f.setNomDeport(entrada.readUTF());
+                f.setFecha(entrada.readUTF());
                 f.setPago(entrada.readUTF());
                 f.setStatus(entrada.readChar());
                 salida.writeUTF(f.getNomDeport());
+                salida.writeUTF(f.getFecha());
                 salida.writeUTF(f.getPago());
-                salida.writeChar(f.getStatus());  
+                salida.writeChar(f.getStatus());
             } catch (EOFException eofe) {
                 entrada.close();
                 salida.close();
@@ -275,7 +317,7 @@ public class JF_modificarFactura extends javax.swing.JFrame {
                     "Error desconocido", JOptionPane.ERROR_MESSAGE);
         }
     } //Fin método mover
-    
+
     public void consultar() {
         try {
             DataInputStream entrada = new DataInputStream(new FileInputStream(
@@ -283,17 +325,22 @@ public class JF_modificarFactura extends javax.swing.JFrame {
             try {
                 cls_factura f = new cls_factura();
                 while (true) {
-                   f.setNomDeport(entrada.readUTF());
-                   f.setPago(entrada.readUTF());
-                   f.setStatus(entrada.readChar());
-                    if(jestado.isSelected()){
-                         f.setStatus('1'); //ACTIVO
-                     }else{
-                         f.setStatus('0'); //INACTIVO
-                     }
+                    f.setNomDeport(entrada.readUTF());
+                    f.setFecha(entrada.readUTF());
+                    f.setPago(entrada.readUTF());
+                    f.setStatus(entrada.readChar());
+                    if (cbx_niños.getSelectedItem().equals(f.getNomDeport())) {       
+                        if (f.getStatus()==('1')){
+                            jestado.setSelected(true); //ACTIVO
+                            
+                        } else {
+                            jestado.setSelected(false); //INACTIVO
+                        }  
+                        txt_pago.setText(f.getPago());
+                    }
                 }
             } catch (EOFException eeof) {
-                entrada.close();     
+                entrada.close();
             }
         } catch (FileNotFoundException fnfe) {
             JOptionPane.showMessageDialog(null, "¡Archivo no encontrado!", "Archivo no encontrado",
@@ -303,7 +350,7 @@ public class JF_modificarFactura extends javax.swing.JFrame {
                     "Error en el dispositivo", JOptionPane.ERROR_MESSAGE);
         }
     } //Fin método consultar
-    
+
     private void llenarcbx() {
         String vecNombres[] = new String[99999];
 
@@ -327,19 +374,19 @@ public class JF_modificarFactura extends javax.swing.JFrame {
         }
 
         cbx_niños.setModel(new DefaultComboBoxModel<>(vecNombres2));
-        
+
     } //Fin método llenar comboBox
-    
-   //Fin métodos JF_modificarFactura
+
+    //Fin métodos JF_modificarFactura
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_buscar;
     private javax.swing.JButton btn_cancelar;
     private javax.swing.JButton btn_guardar;
     private javax.swing.JComboBox<String> cbx_niños;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JCheckBox jestado;
     private javax.swing.JTextField txt_pago;

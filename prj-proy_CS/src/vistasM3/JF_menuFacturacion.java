@@ -104,6 +104,7 @@ public class JF_menuFacturacion extends javax.swing.JFrame {
 
     private void btn_editarFacturaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editarFacturaMouseClicked
         // TODO add your handling code here:
+        new JF_modificarFactura().setVisible(true);
         dispose();
     }//GEN-LAST:event_btn_editarFacturaMouseClicked
 
