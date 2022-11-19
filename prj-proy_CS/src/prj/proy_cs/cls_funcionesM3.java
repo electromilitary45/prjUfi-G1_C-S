@@ -63,5 +63,13 @@ public class cls_funcionesM3 {
         }
          */
     }
+   ///Funciones para vista JF_modificarFactura (se encuentran instanciadas en dicho formulario)
+    /*
+    1-public void modificarFactura()   
+    2-public void mover() 
+    3-public void consultar()
+    4-public void limpiar()
+    5-private void llenarcbx()
+    */
 
 }// fin cls_funcionesM3{}
