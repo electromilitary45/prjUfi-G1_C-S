@@ -249,22 +249,23 @@ public class cls_funcionesM2 {
         for (int x = 0; x < listaDeportes.size(); x++) {
             if (listaDeportes.get(x).getNombre().equals(nombre)) {
                 encontrado = true;
-                JOptionPane.showMessageDialog(null, "DEPORTE ENCONTRADO");
                 return encontrado;
             }
         }
         return encontrado;
     }
 
-    public void editarDeporte(String nombre, String caracteristicas, Boolean Status) {
+    public boolean editarDeporte(String nombre, String caracteristicas) {
         for (int x = 0; x < listaDeportes.size(); x++) {
             if (listaDeportes.get(x).getNombre().equals(nombre)) {
                 listaDeportes.get(x).setCaracteristicas(caracteristicas);
                 listaDeportes.get(x).setStatus(Boolean.TRUE);
+                return true;
             }
         }
+        return false;
     }
-
+    
     public void llenarcbxdeportes(String vecDatos[]) {
         for (int i = 0; i < listaDeportes.size(); i++) {
             vecDatos[i] = listaDeportes.get(i).getNombre();
