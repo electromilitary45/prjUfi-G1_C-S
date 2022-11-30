@@ -115,7 +115,7 @@ public class JF_agregarFactura extends javax.swing.JFrame {
         try {
             if ((String) cbx_ninos.getSelectedItem() != null && !txt_pago.getText().isBlank() && !txt_pago.getText().isEmpty()) {
                 String nino = (String) cbx_ninos.getSelectedItem();
-                String pago = txt_pago.getText();
+                int pago = Integer.parseInt(txt_pago.getText());
                 new cls_funcionesM3().agregarReserva(pago, nino);
                 dispose();
                 new JF_menuFacturacion().setVisible(true);
