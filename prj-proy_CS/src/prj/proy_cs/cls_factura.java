@@ -11,13 +11,13 @@ package prj.proy_cs;
 public class cls_factura {
     private String nomDeport;
     private String fecha;
-    private int  pago;
+    private String pago;
     private char status; //STATUS = '1' =>ACTIVO || STATUS='0' => INACTIVO
 
     public cls_factura() {
         this.nomDeport="";
         this.fecha="";
-        this.pago=0;
+        this.pago="";
         this.status='1';
     }
 
@@ -37,15 +37,13 @@ public class cls_factura {
         this.fecha = fecha;
     }
 
-    public int getPago() {
+    public String getPago() {
         return pago;
     }
 
-    public void setPago(int pago) {
+    public void setPago(String pago) {
         this.pago = pago;
     }
-
-   
 
     public char getStatus() {
         return status;

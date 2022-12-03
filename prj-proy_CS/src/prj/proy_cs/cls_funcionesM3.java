@@ -19,7 +19,7 @@ public class cls_funcionesM3 {
      */
     //----------------------METODOS MODULO 3------------------------
     //--agregarReserva--
-    public void agregarReserva(int pago, String nombreDepor) {
+    public void agregarReserva(String pago, String nombreDepor) {
         try {
             cls_factura f = new cls_factura();
             
@@ -35,7 +35,7 @@ public class cls_funcionesM3 {
 
             salida.writeUTF(f.getNomDeport());
             salida.writeUTF(f.getFecha());
-            salida.writeInt(f.getPago());
+            salida.writeUTF(f.getPago());
             salida.writeChar(f.getStatus());
 
             salida.close();
@@ -67,8 +67,8 @@ public class cls_funcionesM3 {
          */
     }
     
-    public void agregarPago(String nomDeport, String fecha, int pago) {
-        //Intancia
+    public void agregarPago(String nomDeport, String fecha, String pago) {
+        
         cls_factura F = new cls_factura();
         F.setNomDeport(nomDeport);
         F.setFecha(fecha);
@@ -82,10 +82,10 @@ public class cls_funcionesM3 {
             int cont=0;
             String dp = "";
             for (int i = 0; i < listaPagos.size(); i++) {
-                dp = dp + listaPagos.get(i).getNomDeport()+ "--" + listaPagos.get(i).getFecha()+ "--" + listaPagos.get(i).getPago() +"\n";
-                cont = cont + listaPagos.get(i).getPago();
+                //dp = dp + listaPagos.get(i).getNomDeport()+ "--" + listaPagos.get(i).getFecha()+ "--" + listaPagos.get(i).getPago() +"\n";
+                cont = cont + Integer.parseInt(listaPagos.get(i).getPago());
             }
-            JOptionPane.showMessageDialog(null, "--Lista Deportistas--\n" + dp);
+            //JOptionPane.showMessageDialog(null, "--Lista Deportistas--\n" + dp);
             JOptionPane.showMessageDialog(null, "--Sumatoria de Pagos--\n" + cont);
         }
     }
