@@ -9,6 +9,7 @@ import java.awt.Color;
 
 import vistasM1.JF_menuRegistro;
 import vistasM2.JF_menuCatalogo;
+import vistasM3.JF_cajas;
 import vistasM3.JF_menuFacturacion;
 
 /**
@@ -156,6 +157,9 @@ public class JF_menu extends javax.swing.JFrame {
 
     private void ico_cajasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_cajasMouseClicked
         // TODO add your handling code here:
+        dispose();
+        JF_cajas JF = new JF_cajas();
+        JF.setVisible(true);
     }//GEN-LAST:event_ico_cajasMouseClicked
 
     private void ico_registroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ico_registroMouseClicked
